@@ -15,6 +15,9 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
 
         public Address Address { get; private set; }
 
+        public OrderStatus OrderStatus { get; private set; }
+        private int _orderStatusId;
+
         public int? GetBuyerId => _buyerId;
         private int? _buyerId;
 
@@ -24,12 +27,11 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
             _orderDate = DateTime.Now;
         }
 
-        public Order(int buyerId, Address address)
+        public Order(int buyerId, Address address) : this()
         {
-            _providerOrders = new List<ProviderOrder>();
-            _orderDate = DateTime.Now;
             _buyerId = buyerId;
             Address = address;
+            _orderStatusId = OrderStatus.Submitted.Id;
         }
 
         private void AddProviderOrder(int providerId)

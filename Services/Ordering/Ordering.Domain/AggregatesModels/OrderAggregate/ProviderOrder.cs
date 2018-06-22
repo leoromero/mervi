@@ -13,17 +13,17 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
         private int _providerId;
         public int GetProviderId => _providerId;
 
-        private ProviderOrderStatus _providerOrderStatus;
-        public ProviderOrderStatus GetProviderOrderStatus => _providerOrderStatus;
+        private int _providerOrderStatusId;
+        public ProviderOrderStatus ProviderOrderStatus { get; private set; }
 
         protected ProviderOrder()
         {
             _orderItems = new List<OrderItem>();
         }
 
-        public ProviderOrder(int? providerId)
+        public ProviderOrder(int? providerId) : this()
         {
-            _orderItems = new List<OrderItem>();
+            _providerOrderStatusId = ProviderOrderStatus.Submitted.Id;
         }
 
         internal void AddOrderItem(int productId, string productName, decimal unitPrice, decimal discount, string pictureUrl, int units)
