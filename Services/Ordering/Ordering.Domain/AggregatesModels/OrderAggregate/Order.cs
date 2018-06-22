@@ -1,6 +1,7 @@
 ﻿using Ordering.Domain.SeedWork;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Ordering.Domain.AggregatesModels.OrderAggregate
@@ -16,5 +17,31 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
 
         public int? GetBuyerId => _buyerId;
         private int? _buyerId;
+
+        protected Order()
+        {
+            _providerOrders = new List<ProviderOrder>();
+            _orderDate = DateTime.Now;
+        }
+
+        public Order(int buyerId, Address address)
+        {
+            _providerOrders = new List<ProviderOrder>();
+            _orderDate = DateTime.Now;
+            _buyerId = buyerId;
+            Address = address;
+        }
+
+        private void AddProviderOrder(int providerId)
+        {
+            if ((_providerOrders.Where(x => x.GetProviderId == providerId) == null))
+                _providerOrders.Add(new ProviderOrder(providerId));
+        }
+
+        public void AddOrderItem(int providerId, int productId, string productName, decimal unitPrice, decimal discount, string pictureUrl, int units = 1)
+        {
+            AddProviderOrder(providerId);
+            _providerOrders.First(x => x.GetProviderId == providerId).AddOrderItem(productId, productName, unitPrice, discount, pictureUrl, units);
+        }
     }
 }
