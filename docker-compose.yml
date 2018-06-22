@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  mervi:
+    image: ${DOCKER_REGISTRY}mervi
+    build:
+      context: .
+      dockerfile: Mervi/Dockerfile
+
+  ordering.api:
+    image: ${DOCKER_REGISTRY}orderingapi
+    build:
+      context: .
+      dockerfile: Services/Ordering/Ordering.API/Dockerfile
+

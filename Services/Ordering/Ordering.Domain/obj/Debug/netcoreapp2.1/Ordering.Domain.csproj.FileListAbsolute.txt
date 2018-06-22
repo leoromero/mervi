@@ -1,0 +1,6 @@
+c:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.Domain\bin\Debug\netcoreapp2.1\Ordering.Domain.deps.json
+c:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.Domain\bin\Debug\netcoreapp2.1\Ordering.Domain.dll
+c:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.Domain\obj\Debug\netcoreapp2.1\Ordering.Domain.csprojAssemblyReference.cache
+c:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.Domain\obj\Debug\netcoreapp2.1\Ordering.Domain.csproj.CoreCompileInputs.cache
+c:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.Domain\obj\Debug\netcoreapp2.1\Ordering.Domain.AssemblyInfoInputs.cache
+c:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.Domain\obj\Debug\netcoreapp2.1\Ordering.Domain.AssemblyInfo.cs
