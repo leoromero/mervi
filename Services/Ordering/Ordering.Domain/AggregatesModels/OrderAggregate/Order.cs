@@ -1,4 +1,4 @@
-﻿using Ordering.Domain.SeedWork;
+﻿using Mervi.SeedWork;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,42 +8,61 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
 {
     public class Order : Entity, IAggregateRoot
     {
-        private DateTime _orderDate;
+        private DateTime orderDate;
 
-        private readonly List<ProviderOrder> _providerOrders;
-        public IReadOnlyCollection<ProviderOrder> ProviderOrders => _providerOrders;
+        private readonly List<OrderItem> orderItems;
+        public IReadOnlyCollection<OrderItem> OrderItems => orderItems;
 
         public Address Address { get; private set; }
 
         public OrderStatus OrderStatus { get; private set; }
-        private int _orderStatusId;
+        private int orderStatusId;
 
-        public int? GetBuyerId => _buyerId;
-        private int? _buyerId;
+        public int? GetBuyerId => buyerId;
+        private int? buyerId;
 
         protected Order()
         {
-            _providerOrders = new List<ProviderOrder>();
-            _orderDate = DateTime.Now;
+            orderItems = new List<OrderItem>();
+            orderDate = DateTime.Now;
         }
 
         public Order(int buyerId, Address address) : this()
         {
-            _buyerId = buyerId;
-            Address = address;
-            _orderStatusId = OrderStatus.Submitted.Id;
-        }
-
-        private void AddProviderOrder(int providerId)
-        {
-            if ((_providerOrders.Where(x => x.GetProviderId == providerId) == null))
-                _providerOrders.Add(new ProviderOrder(providerId));
+            this.buyerId = buyerId;
+            this.Address = address;
+            this.orderStatusId = OrderStatus.Submitted.Id;
         }
 
         public void AddOrderItem(int providerId, int productId, string productName, decimal unitPrice, decimal discount, string pictureUrl, int units = 1)
         {
-            AddProviderOrder(providerId);
-            _providerOrders.First(x => x.GetProviderId == providerId).AddOrderItem(productId, productName, unitPrice, discount, pictureUrl, units);
+
+            var existingOrderForProduct = orderItems.Where(o => o.ProductId == productId)
+                 .SingleOrDefault();
+
+            if (existingOrderForProduct != null)
+            {
+                //if previous line exist modify it with higher discount  and units..
+
+                if (discount > existingOrderForProduct.GetCurrentDiscount())
+                {
+                    existingOrderForProduct.SetNewDiscount(discount);
+                }
+
+                existingOrderForProduct.AddUnits(units);
+            }
+            else
+            {
+                //add validated new order item
+
+                var orderItem = new OrderItem(productId, providerId, productName, unitPrice, discount, pictureUrl, units);
+                orderItems.Add(orderItem);
+            }
+        }
+        
+        public void SetBuyerId(int id)
+        {
+            buyerId = id;
         }
     }
 }

@@ -750,11 +750,25 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
-      "Ordering.Domain/1.0.0": {
+      "Mervi.SeedWork/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "MediatR": "5.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Mervi.SeedWork.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mervi.SeedWork.dll": {}
+        }
+      },
+      "Ordering.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "MediatR": "5.0.1",
+          "Mervi.SeedWork": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Ordering.Domain.dll": {}
@@ -2941,6 +2955,11 @@
         "system.threading.tasks.4.0.11.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
+    },
+    "Mervi.SeedWork/1.0.0": {
+      "type": "project",
+      "path": "../../../Common/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj",
+      "msbuildProject": "../../../Common/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj"
     },
     "Ordering.Domain/1.0.0": {
       "type": "project",

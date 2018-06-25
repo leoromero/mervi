@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 
-namespace Ordering.Domain.SeedWork
+namespace Mervi.SeedWork
 {
     public abstract class Enumeration : IComparable
     {

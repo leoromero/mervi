@@ -6,14 +6,11 @@
 
   <ItemGroup>
     <Folder Include="Events\" />
+    <Folder Include="Exceptions\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MediatR" Version="5.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Common\Domain\Mervi.SeedWork\Mervi.SeedWork.csproj" />
+    <ProjectReference Include="..\..\..\..\Common\Domain\Mervi.SeedWork\Mervi.SeedWork.csproj" />
   </ItemGroup>
 
 </Project>

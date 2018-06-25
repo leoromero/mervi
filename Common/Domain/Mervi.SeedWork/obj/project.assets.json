@@ -216,19 +216,6 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
-      },
-      "Mervi.SeedWork/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
-        "dependencies": {
-          "MediatR": "5.0.1"
-        },
-        "compile": {
-          "bin/placeholder/Mervi.SeedWork.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Mervi.SeedWork.dll": {}
-        }
       }
     }
   },
@@ -707,17 +694,11 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
-    },
-    "Mervi.SeedWork/1.0.0": {
-      "type": "project",
-      "path": "../../../Common/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj",
-      "msbuildProject": "../../../Common/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "MediatR >= 5.0.1",
-      "Mervi.SeedWork >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
@@ -728,11 +709,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj",
-      "projectName": "Ordering.Domain",
-      "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\Domain\\Mervi.SeedWork\\Mervi.SeedWork.csproj",
+      "projectName": "Mervi.SeedWork",
+      "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\Domain\\Mervi.SeedWork\\Mervi.SeedWork.csproj",
       "packagesPath": "C:\\Users\\lromero\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Ordering\\Ordering.Domain\\obj\\",
+      "outputPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\Domain\\Mervi.SeedWork\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -750,11 +731,7 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {
-            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\Domain\\Mervi.SeedWork\\Mervi.SeedWork.csproj": {
-              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\Domain\\Mervi.SeedWork\\Mervi.SeedWork.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

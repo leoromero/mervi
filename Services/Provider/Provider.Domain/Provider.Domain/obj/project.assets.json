@@ -710,13 +710,12 @@
     },
     "Mervi.SeedWork/1.0.0": {
       "type": "project",
-      "path": "../../../Common/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj",
-      "msbuildProject": "../../../Common/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj"
+      "path": "../../../../Common/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj",
+      "msbuildProject": "../../../../Common/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "MediatR >= 5.0.1",
       "Mervi.SeedWork >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
@@ -728,11 +727,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj",
-      "projectName": "Ordering.Domain",
-      "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.Domain\\Provider.Domain\\Provider.Domain.csproj",
+      "projectName": "Provider.Domain",
+      "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.Domain\\Provider.Domain\\Provider.Domain.csproj",
       "packagesPath": "C:\\Users\\lromero\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Ordering\\Ordering.Domain\\obj\\",
+      "outputPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.Domain\\Provider.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -766,10 +765,6 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
-          "MediatR": {
-            "target": "Package",
-            "version": "[5.0.1, )"
-          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Ordering.Domain.SeedWork
+namespace Mervi.SeedWork
 {
     public interface IRepository<T> where T : IAggregateRoot
     {

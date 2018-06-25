@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Ordering.Domain.SeedWork
+namespace Mervi.SeedWork
 {
-    public abstract class ValueObject
+    public interface IAggregateRoot
     {
     }
 }

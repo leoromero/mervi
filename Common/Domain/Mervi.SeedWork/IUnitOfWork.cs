@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Ordering.Domain.SeedWork
+namespace Mervi.SeedWork
 {
     public interface IUnitOfWork : IDisposable
     {
