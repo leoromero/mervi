@@ -1,4 +1,4 @@
-﻿using Ordering.Domain.SeedWork;
+﻿using Mervi.SeedWork;
 using System;
 using System.Collections.Generic;
 using System.Text;

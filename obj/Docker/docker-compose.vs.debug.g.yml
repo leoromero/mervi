@@ -9,7 +9,7 @@ services:
       - DOTNET_USE_POLLING_FILE_WATCHER=1
       - NUGET_FALLBACK_PACKAGES=/root/.nuget/fallbackpackages
     volumes:
-      - c:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.API:/app
+      - C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.API:/app
       - C:\Users\lromero\vsdbg\vs2017u5:/remote_debugger:ro
       - C:\Users\lromero\.nuget\packages\:/root/.nuget/packages:ro
       - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro

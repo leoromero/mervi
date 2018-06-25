@@ -2,10 +2,13 @@ C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.API\bin\Debug\net
 C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.API\bin\Debug\netcoreapp2.1\Ordering.API.runtimeconfig.json
 C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.API\bin\Debug\netcoreapp2.1\Ordering.API.runtimeconfig.dev.json
 C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.API\bin\Debug\netcoreapp2.1\Ordering.API.dll
-C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.API\obj\Debug\netcoreapp2.1\Ordering.API.csprojAssemblyReference.cache
+C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.API\bin\Debug\netcoreapp2.1\Ordering.API.pdb
 C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.API\obj\Debug\netcoreapp2.1\Ordering.API.csproj.CoreCompileInputs.cache
 C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.API\obj\Debug\netcoreapp2.1\Ordering.API.RazorAssemblyInfo.cache
 C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.API\obj\Debug\netcoreapp2.1\Ordering.API.RazorAssemblyInfo.cs
+C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.API\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.API\obj\Debug\netcoreapp2.1\Ordering.API.AssemblyInfoInputs.cache
 C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.API\obj\Debug\netcoreapp2.1\Ordering.API.AssemblyInfo.cs
 C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.API\obj\Debug\netcoreapp2.1\Ordering.API.RazorTargetAssemblyInfo.cache
+C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.API\obj\Debug\netcoreapp2.1\Ordering.API.dll
+C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.API\obj\Debug\netcoreapp2.1\Ordering.API.pdb

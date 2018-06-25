@@ -1,7 +1,7 @@
 services:
   mervi:
     build:
-      context: c:\Users\lromero\Source\Repos\Mervi
+      context: C:\Users\lromero\Source\Repos\Mervi
       dockerfile: Mervi/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
@@ -18,7 +18,7 @@ services:
     - C:\Users\lromero\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
   ordering.api:
     build:
-      context: c:\Users\lromero\Source\Repos\Mervi
+      context: C:\Users\lromero\Source\Repos\Mervi
       dockerfile: Services/Ordering/Ordering.API/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development

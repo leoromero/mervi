@@ -2958,8 +2958,8 @@
     },
     "Mervi.SeedWork/1.0.0": {
       "type": "project",
-      "path": "../../../Common/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj",
-      "msbuildProject": "../../../Common/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj"
+      "path": "../../../Common/DDD/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj",
+      "msbuildProject": "../../../Common/DDD/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj"
     },
     "Ordering.Domain/1.0.0": {
       "type": "project",

@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Ordering.Domain.SeedWork;
+using Mervi.SeedWork;
 using System.Linq;
 using System.Threading.Tasks;
 

@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Common\Domain\Mervi.SeedWork\Mervi.SeedWork.csproj" />
+    <ProjectReference Include="..\..\..\Common\DDD\Domain\Mervi.SeedWork\Mervi.SeedWork.csproj" />
   </ItemGroup>
 
 </Project>

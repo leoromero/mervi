@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Mervi.SeedWork;
+using Microsoft.EntityFrameworkCore;
 using Ordering.Domain.AggregatesModels.OrderAggregate;
-using Ordering.Domain.SeedWork;
 using System;
 using System.Collections.Generic;
 using System.Text;

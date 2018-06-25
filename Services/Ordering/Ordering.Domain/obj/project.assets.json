@@ -710,8 +710,8 @@
     },
     "Mervi.SeedWork/1.0.0": {
       "type": "project",
-      "path": "../../../Common/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj",
-      "msbuildProject": "../../../Common/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj"
+      "path": "../../../Common/DDD/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj",
+      "msbuildProject": "../../../Common/DDD/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -751,8 +751,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\Domain\\Mervi.SeedWork\\Mervi.SeedWork.csproj": {
-              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\Domain\\Mervi.SeedWork\\Mervi.SeedWork.csproj"
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\DDD\\Domain\\Mervi.SeedWork\\Mervi.SeedWork.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\DDD\\Domain\\Mervi.SeedWork\\Mervi.SeedWork.csproj"
             }
           }
         }

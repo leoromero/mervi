@@ -1,7 +1,7 @@
 ﻿using MediatR;
+using Mervi.SeedWork;
 using Microsoft.EntityFrameworkCore;
 using Ordering.Domain.AggregatesModels.OrderAggregate;
-using Ordering.Domain.SeedWork;
 using System;
 using System.Threading;
 using System.Threading.Tasks;

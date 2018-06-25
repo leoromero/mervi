@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "4c7f6376d53d0a9b4620e378b98214ad85c9b276"
+    "signature": "97c4eb4cf97044f4ec2388543aede1679f7be5af"
   },
   "compilationOptions": {
     "defines": [
@@ -25,6 +25,7 @@
       "Ordering.API/1.0.0": {
         "dependencies": {
           "MediatR": "5.0.1",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "5.0.1",
           "Microsoft.AspNetCore.App": "2.1.0",
           "Microsoft.NETCore.App": "2.1.0"
         },
@@ -44,6 +45,21 @@
         },
         "compile": {
           "lib/netstandard2.0/MediatR.dll": {}
+        }
+      },
+      "MediatR.Extensions.Microsoft.DependencyInjection/5.0.1": {
+        "dependencies": {
+          "MediatR": "5.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MediatR.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "5.0.1.0",
+            "fileVersion": "5.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/MediatR.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
       "Microsoft.NETCore.App/2.1.0": {
@@ -3174,6 +3190,13 @@
       "sha512": "sha512-SgJDOVGMUwC4E+cw4GTy3nv9gye+K68HXPpRselRXwdOgodpwdq6vTVQajyptk7AVhCzBD8c3ccYLhNRugfgfA==",
       "path": "mediatr/5.0.1",
       "hashPath": "mediatr.5.0.1.nupkg.sha512"
+    },
+    "MediatR.Extensions.Microsoft.DependencyInjection/5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xR/UDBBkRL+f2fSOb+zTjjMUOu2SyS/PizUE38ENmvDABKvnQsiCmb51C0eTRc3gsqBxuKoUOzPQNbqFjT7eug==",
+      "path": "mediatr.extensions.microsoft.dependencyinjection/5.0.1",
+      "hashPath": "mediatr.extensions.microsoft.dependencyinjection.5.0.1.nupkg.sha512"
     },
     "Microsoft.NETCore.App/2.1.0": {
       "type": "package",
