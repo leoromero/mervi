@@ -38,16 +38,6 @@ namespace Ordering.Infrastructure.Repositories
                 .Include(o => o.Address)
                 .SingleOrDefaultAsync(o => o.Id == orderId);
 
-            if (order != null)
-            {
-                await _context.Entry(order)
-                    .Collection(i => i.OrderItems).LoadAsync();
-                await _context.Entry(order)
-                    .Reference(i => i.OrderStatus).LoadAsync();
-                await _context.Entry(order)
-                    .Reference(i => i.Address).LoadAsync();
-            }
-
             return order;
         }
 
