@@ -12,3 +12,5 @@ C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.Infrastructure\bi
 C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.Infrastructure\obj\Debug\netcoreapp2.1\Ordering.Infrastructure.csproj.CopyComplete
 C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.Infrastructure\obj\Debug\netcoreapp2.1\Ordering.Infrastructure.dll
 C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.Infrastructure\obj\Debug\netcoreapp2.1\Ordering.Infrastructure.pdb
+C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.Infrastructure\bin\Debug\netcoreapp2.1\Ordering.Infrastructure.runtimeconfig.json
+C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.Infrastructure\bin\Debug\netcoreapp2.1\Ordering.Infrastructure.runtimeconfig.dev.json

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Ordering.Domain.AggregatesModels.BuyerAggregate
 {
-    public class Buyer : IAggregateRoot
+    public class Buyer : Entity, IAggregateRoot
     {
     }
 }

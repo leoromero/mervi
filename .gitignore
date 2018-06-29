@@ -1,1 +1,7 @@
 /.vs
+bin/
+debug/
+Debug/
+bin
+debug
+Debug

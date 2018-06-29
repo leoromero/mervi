@@ -2,6 +2,7 @@
 using Mervi.SeedWork;
 using Microsoft.EntityFrameworkCore;
 using Ordering.Domain.AggregatesModels.OrderAggregate;
+using Ordering.Infrastructure.EntityConfigurations;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -23,13 +24,8 @@ namespace Ordering.Infrastructure
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.ApplyConfiguration(new ClientRequestEntityTypeConfiguration());
-            //modelBuilder.ApplyConfiguration(new PaymentMethodEntityTypeConfiguration());
-            //modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
-            //modelBuilder.ApplyConfiguration(new OrderItemEntityTypeConfiguration());
-            //modelBuilder.ApplyConfiguration(new CardTypeEntityTypeConfiguration());
-            //modelBuilder.ApplyConfiguration(new OrderStatusEntityTypeConfiguration());
-            //modelBuilder.ApplyConfiguration(new BuyerEntityTypeConfiguration());
+            modelBuilder.ForSqlServerUseSequenceHiLo("DBSequenceHiLo");
+            modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
         }
 
 

@@ -5,11 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="EntityConfigurations\" />
+    <Compile Remove="Migrations\20180629145903_InitialCreate.cs" />
+    <Compile Remove="Migrations\20180629151322_InitialCreate.cs" />
+    <Compile Remove="Migrations\20180629152116_InitialCreate.cs" />
+    <Compile Remove="Migrations\20180629152224_InitialCreate.cs" />
+    <Compile Remove="Migrations\20180629153306_InitialCreate.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>

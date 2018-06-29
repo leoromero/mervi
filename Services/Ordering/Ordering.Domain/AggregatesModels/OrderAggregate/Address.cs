@@ -1,26 +1,39 @@
-﻿using System;
+﻿using Mervi.SeedWork;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Ordering.Domain.AggregatesModels.OrderAggregate
 {
-    public class Address
+    public class Address : ValueObject
     {
-        private string street;
-        private string Number;
-        private string city;
-        private string province;
-        private string Comments;
-        private string country;
+        public string Street { get; private set; }
+        public string Number { get; private set; }
+        public string City { get; private set; }
+        public string Province { get; private set; }
+        public string Comments { get; private set; }
+        public string Country { get; private set; }
 
         public Address(string street, string number, string city, string province, string country, string comments)
         {
-            this.street = street;
+            this.Street = street;
             this.Number = number;
-            this.city = city;
-            this.province = province;
+            this.City = city;
+            this.Province = province;
             this.Comments = comments;
-            this.country = country;
+            this.Country = country;
+        }
+
+        private Address() { }
+
+        protected override IEnumerable<object> GetAtomicValues()
+        {
+            yield return Street;
+            yield return Number;
+            yield return City;
+            yield return Province;
+            yield return Comments;
+            yield return Country;
         }
     }
 }
