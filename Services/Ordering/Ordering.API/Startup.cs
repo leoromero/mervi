@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using EventBus.Abstractions;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -14,6 +15,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Ordering.API.Application.IntegrationEvents.Events;
+using Ordering.API.Infrastructure.AutofacModules;
 using Ordering.Infrastructure;
 
 namespace Ordering.API
@@ -40,6 +43,10 @@ namespace Ordering.API
 
             var container = new ContainerBuilder();
             container.Populate(services);
+
+            container.RegisterModule(new MediatorModule());
+            container.RegisterModule(new ApplicationModule());
+            
             return new AutofacServiceProvider(container.Build());
         }
 
@@ -57,6 +64,17 @@ namespace Ordering.API
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            ConfigureEventBus(app);
         }
+
+
+        private void ConfigureEventBus(IApplicationBuilder app)
+        {
+            var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
+
+            eventBus.Subscribe<CheckoutCompletedIntegrationEvent, IIntegrationEventHandler<CheckoutCompletedIntegrationEvent>>();
+        }
+
     }
 }
