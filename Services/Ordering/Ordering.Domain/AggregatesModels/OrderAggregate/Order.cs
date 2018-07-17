@@ -18,8 +18,8 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
         public OrderStatus OrderStatus { get; private set; }
         private int orderStatusId;
 
-        public int? GetBuyerId => buyerId;
-        private int? buyerId;
+        public string GetBuyerId => buyerId;
+        private string buyerId;
 
         protected Order()
         {
@@ -27,7 +27,7 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
             orderDate = DateTime.Now;
         }
 
-        public Order(int buyerId, Address address) : this()
+        public Order(string buyerId, Address address) : this()
         {
             this.buyerId = buyerId;
             this.Address = address;
@@ -60,7 +60,7 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
             }
         }
         
-        public void SetBuyerId(int id)
+        public void SetBuyerId(string id)
         {
             buyerId = id;
         }

@@ -53,6 +53,9 @@ namespace Ordering.API.Application.Commands
         public int CardTypeId { get; private set; }
 
         [DataMember]
+        public string Comments { get; private set; }
+
+        [DataMember]
         public IEnumerable<OrderItemDTO> OrderItems => _orderItems;
 
         public CreateOrderCommand()

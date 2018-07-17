@@ -10,25 +10,26 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
     {
         public int ProductId { get; private set; }
 
-        private int _ProviderId;
-        private string _ProductName;
-        private decimal _UnitPrice;
-        private decimal _Discount;
-        private string _PictureUrl;
-        private int _Units;
-        private OrderItemStatus _OrderItemStatus;
+        private int providerId;
+        private string productName;
+        private decimal unitPrice;
+        private decimal discount;
+        private string pictureUrl;
+        private int units;
+        public OrderItemStatus OrderItemStatus { get; private set; }
+        private int orderItemStatusId;
 
-        public int GetProviderId() => _ProviderId;
+        public int GetProviderId() => providerId;
 
-        public string GetProductName() => _ProductName;
+        public string GetProductName() => productName;
 
-        public decimal GetUnitPrice() => _UnitPrice;
+        public decimal GetUnitPrice() => unitPrice;
 
-        public decimal GetCurrentDiscount() => _Discount;
+        public decimal GetCurrentDiscount() => discount;
 
-        public string GetPictureUrl() => _PictureUrl;
+        public string GetPictureUrl() => pictureUrl;
 
-        public int GetUnits() => _Units;
+        public int GetUnits() => units;
 
         protected OrderItem()
         {
@@ -37,12 +38,13 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
         public OrderItem(int productId, int providerId, string productName, decimal unitPrice, decimal discount, string pictureUrl, int units)
         {
             ProductId = productId;
-            _ProviderId = providerId;
-            _ProductName = productName;
-            _UnitPrice = unitPrice;
-            _Discount = discount;
-            _PictureUrl = pictureUrl;
-            _Units = units;
+            this.providerId = providerId;
+            this.productName = productName;
+            this.unitPrice = unitPrice;
+            this.discount = discount;
+            this.pictureUrl = pictureUrl;
+            this.units = units;
+            orderItemStatusId = OrderItemStatus.Submitted.Id;
         }
 
         public void AddUnits(int units)
@@ -50,7 +52,7 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
             if (units < 0)
                 throw new OrderingDomainException("invalid units");
 
-            _Units += units;
+            this.units += units;
         }
 
         public void SetNewDiscount(decimal discount)
@@ -60,7 +62,7 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
                 throw new OrderingDomainException("Discount is not valid");
             }
 
-            _Discount= discount;
+            this.discount = discount;
         }
     }
 }
