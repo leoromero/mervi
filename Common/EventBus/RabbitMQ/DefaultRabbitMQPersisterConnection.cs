@@ -10,7 +10,7 @@ using System.IO;
 using System.Net.Sockets;
 using System.Text;
 
-namespace EventBusRabbitMQ
+namespace Mervi.Common.EventBus.EventBusRabbitMQ
 {
     public class DefaultRabbitMQPersistentConnection
        : IRabbitMQPersistentConnection

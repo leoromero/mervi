@@ -1,10 +1,22 @@
 version: '3.4'
 
 services:
+  sql.data:
+    image: microsoft/mssql-server-linux:2017-latest
+
+  nosql.data:
+    image: mongo
+
+  basket.data:
+    image: redis:alpine
+      
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+
   mervi:
     image: ${DOCKER_REGISTRY}mervi
     build:
-      context: .
+      context: .  
       dockerfile: Mervi/Dockerfile
 
   ordering.api:
@@ -20,3 +32,12 @@ services:
       context: .
       dockerfile: Services/Provider/Provider.API/Dockerfile
 
+
+  basket.api:
+    image: ${DOCKER_REGISTRY}basketapi
+    build:
+      context: .
+      dockerfile: ../Basket.API/Dockerfile
+    depends_on:
+      - basket.data,
+      - rabbitmq
