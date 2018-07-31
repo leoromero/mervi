@@ -1,0 +1,29 @@
+services:
+  basket.api:
+    build:
+      context: C:\Users\lromero\Source\Repos\Mervi
+      dockerfile: ../Basket.API/Dockerfile
+    depends_on:
+    - rabbitmq
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTPS_PORT: '44326'
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      EventBusConnection: rabbitmq
+      EventBusPassword: ' '''''
+      EventBusUserName: ' '''''
+    image: basketapi
+    ports:
+    - published: 5103
+      target: 80
+    volumes:
+    - C:\Users\lromero\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\lromero\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+    - published: 5672
+      target: 5672
+    - published: 15672
+      target: 15672
+version: '3.4'

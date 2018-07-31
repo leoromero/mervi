@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using EventBus.Abstractions;
+using Mervi.Common.EventBus.EventBusRabbitMQ;
 using Ordering.API.Application.IntegrationEvents.Events;
 using Ordering.API.Application.IntegrationEvents.Handlers;
 using Ordering.Domain.AggregatesModels.OrderAggregate;
@@ -19,7 +20,7 @@ namespace Ordering.API.Infrastructure.AutofacModules
             builder.RegisterType<OrderRepository>()
                 .As<IOrderRepository>()
                 .InstancePerLifetimeScope();
-
+            
             builder.RegisterAssemblyTypes(typeof(CheckoutCompletedIntegrationEventHandler).GetTypeInfo().Assembly)
                 .AsClosedTypesOf(typeof(IIntegrationEventHandler<>));
         }
