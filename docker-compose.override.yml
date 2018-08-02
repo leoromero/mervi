@@ -5,17 +5,24 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:443;http://+:80
-      - ASPNETCORE_HTTPS_PORT=44326
-      - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
+      - ASPNETCORE_HTTPS_PORT=44312
+      - EventBusConnection=rabbitmq
       - EventBusPassword=guest
       - EventBusUserName=guest
+      - ConnectionString=basket.data
     ports:
-      - "5103:80"
+      - "51361:80"
+      - "44312:443"
     volumes:
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
   
   rabbitmq:
     ports:
-      - "15672:15672"  # Important: In a production environment your should remove the external port
-      - "5672:5672"    # Important: In a production environment your should remove the external port
+      - "15672:15672"
+      - "5672:5672"  
+
+  basket.data:
+    ports:
+      - "15673:15673"
+      - "5673:5673"

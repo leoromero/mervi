@@ -60,12 +60,12 @@ namespace Basket.Infrastructure
 
             toAdd.ForEach(async i =>
             {
-                await AddProductBasketsAsync(i.Id, basket.BuyerId);
+                await AddProductBasketsAsync(i.ProductId, basket.BuyerId);
             });
 
             toRemove.ForEach(async i =>
             {
-                await RemoveProductBasketsAsync(i.Id, basket.BuyerId);
+                await RemoveProductBasketsAsync(i.ProductId, basket.BuyerId);
             });
 
             return await GetBasketAsync(basket.BuyerId);

@@ -4,6 +4,9 @@ services:
   rabbitmq:
     image: rabbitmq:3-management-alpine
 
+  basket.data:
+    image: redis:alpine
+
   basket.api:
     image: ${DOCKER_REGISTRY}basketapi
     build:
@@ -11,3 +14,4 @@ services:
       dockerfile: ../Basket.API/Dockerfile
     depends_on:
     - rabbitmq
+    - basket.data
