@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Basket.Domain\\Basket.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.Domain\\Basket.Domain.csproj",
       "projectName": "Basket.Domain",
-      "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Basket.Domain\\Basket.Domain.csproj",
+      "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.Domain\\Basket.Domain.csproj",
       "packagesPath": "C:\\Users\\lromero\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Basket.Domain\\obj\\",
+      "outputPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

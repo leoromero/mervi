@@ -1353,14 +1353,20 @@
           "bin/placeholder/Basket.Domain.dll": {}
         }
       },
-      "Basket.DTOs/1.0.0": {
+      "Basket.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Basket.Domain": "1.0.0",
+          "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket.DTOs\\Basket.DTOs.csproj": "1.0.0",
+          "Newtonsoft.Json": "11.0.2",
+          "StackExchange.Redis": "1.2.6"
+        },
         "compile": {
-          "bin/placeholder/Basket.DTOs.dll": {}
+          "bin/placeholder/Basket.Infrastructure.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Basket.DTOs.dll": {}
+          "bin/placeholder/Basket.Infrastructure.dll": {}
         }
       }
     }
@@ -4695,19 +4701,18 @@
       "path": "../Basket.Domain/Basket.Domain.csproj",
       "msbuildProject": "../Basket.Domain/Basket.Domain.csproj"
     },
-    "Basket.DTOs/1.0.0": {
+    "Basket.Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../../Basket.DTOs/Basket.DTOs.csproj",
-      "msbuildProject": "../../Basket.DTOs/Basket.DTOs.csproj"
+      "path": "../Basket.Infrastructure/Basket.Infrastructure.csproj",
+      "msbuildProject": "../Basket.Infrastructure/Basket.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Basket.DTOs >= 1.0.0",
-      "Basket.Domain >= 1.0.0",
-      "Microsoft.NETCore.App >= 2.1.0",
-      "Newtonsoft.Json >= 11.0.2",
-      "StackExchange.Redis >= 1.2.6"
+      "Basket.Infrastructure >= 1.0.0",
+      "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket.DTOs\\Basket.DTOs.csproj",
+      "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Common\\EventBus\\EventBus\\EventBus.csproj",
+      "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
   "packageFolders": {
@@ -4717,11 +4722,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Basket.Infrastructure\\Basket.Infrastructure.csproj",
-      "projectName": "Basket.Infrastructure",
-      "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Basket.Infrastructure\\Basket.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.BL\\Basket.BL.csproj",
+      "projectName": "Basket.BL",
+      "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.BL\\Basket.BL.csproj",
       "packagesPath": "C:\\Users\\lromero\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Basket.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.BL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4740,11 +4745,14 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\lromero\\Source\\Repos\\Basket.DTOs\\Basket.DTOs.csproj": {
-              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Basket.DTOs\\Basket.DTOs.csproj"
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket.DTOs\\Basket.DTOs.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket.DTOs\\Basket.DTOs.csproj"
             },
-            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Basket.Domain\\Basket.Domain.csproj": {
-              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Basket.Domain\\Basket.Domain.csproj"
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.Infrastructure\\Basket.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.Infrastructure\\Basket.Infrastructure.csproj"
+            },
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Common\\EventBus\\EventBus\\EventBus.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Common\\EventBus\\EventBus\\EventBus.csproj"
             }
           }
         }
@@ -4763,14 +4771,6 @@
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
-          },
-          "Newtonsoft.Json": {
-            "target": "Package",
-            "version": "[11.0.2, )"
-          },
-          "StackExchange.Redis": {
-            "target": "Package",
-            "version": "[1.2.6, )"
           }
         },
         "imports": [
@@ -4780,5 +4780,25 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket.DTOs\\Basket.DTOs.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket.DTOs\\Basket.DTOs.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Common\\EventBus\\EventBus\\EventBus.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Common\\EventBus\\EventBus\\EventBus.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    }
+  ]
 }

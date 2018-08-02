@@ -4828,6 +4828,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "Basket.DTOs/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Basket.DTOs.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Basket.DTOs.dll": {}
+        }
       }
     }
   },
@@ -12772,15 +12782,20 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Basket.DTOs/1.0.0": {
+      "type": "project",
+      "path": "../Basket.DTOs/Basket.DTOs.csproj",
+      "msbuildProject": "../Basket.DTOs/Basket.DTOs.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Autofac.Extensions.DependencyInjection >= 4.2.2",
-      "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Basket.DTOs\\Basket.DTOs.csproj",
-      "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Mervi\\Basket.BL\\Basket.BL.csproj",
-      "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Mervi\\Basket.Infrastructure\\Basket.Infrastructure.csproj",
-      "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Mervi\\Common\\EventBus\\RabbitMQ\\EventBusRabbitMQ.csproj",
+      "Basket.DTOs >= 1.0.0",
+      "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Basket.BL\\Basket.BL.csproj",
+      "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Basket.Infrastructure\\Basket.Infrastructure.csproj",
+      "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Common\\EventBus\\RabbitMQ\\EventBusRabbitMQ.csproj",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1",
@@ -12794,11 +12809,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Basket.API\\Basket.API.csproj",
+      "projectUniqueName": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.API\\Basket.API.csproj",
       "projectName": "Basket.API",
-      "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Basket.API\\Basket.API.csproj",
+      "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.API\\Basket.API.csproj",
       "packagesPath": "C:\\Users\\lromero\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Basket.API\\obj\\",
+      "outputPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12817,17 +12832,17 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Basket.DTOs\\Basket.DTOs.csproj": {
-              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Basket.DTOs\\Basket.DTOs.csproj"
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.DTOs\\Basket.DTOs.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.DTOs\\Basket.DTOs.csproj"
             },
-            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Mervi\\Basket.BL\\Basket.BL.csproj": {
-              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Mervi\\Basket.BL\\Basket.BL.csproj"
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Basket.BL\\Basket.BL.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Basket.BL\\Basket.BL.csproj"
             },
-            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Mervi\\Basket.Infrastructure\\Basket.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Mervi\\Basket.Infrastructure\\Basket.Infrastructure.csproj"
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Basket.Infrastructure\\Basket.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Basket.Infrastructure\\Basket.Infrastructure.csproj"
             },
-            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Mervi\\Common\\EventBus\\RabbitMQ\\EventBusRabbitMQ.csproj": {
-              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Mervi\\Common\\EventBus\\RabbitMQ\\EventBusRabbitMQ.csproj"
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Common\\EventBus\\RabbitMQ\\EventBusRabbitMQ.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Common\\EventBus\\RabbitMQ\\EventBusRabbitMQ.csproj"
             }
           }
         }
@@ -12877,8 +12892,8 @@
     {
       "code": "NU1104",
       "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\lromero\\Source\\Repos\\Mervi\\Mervi\\Common\\EventBus\\RabbitMQ\\EventBusRabbitMQ.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Mervi\\Common\\EventBus\\RabbitMQ\\EventBusRabbitMQ.csproj",
+      "message": "Unable to find project 'C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Common\\EventBus\\RabbitMQ\\EventBusRabbitMQ.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Common\\EventBus\\RabbitMQ\\EventBusRabbitMQ.csproj",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.1"
       ]
@@ -12886,8 +12901,8 @@
     {
       "code": "NU1104",
       "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\lromero\\Source\\Repos\\Mervi\\Mervi\\Basket.BL\\Basket.BL.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Mervi\\Basket.BL\\Basket.BL.csproj",
+      "message": "Unable to find project 'C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Basket.BL\\Basket.BL.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Basket.BL\\Basket.BL.csproj",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.1"
       ]
@@ -12895,17 +12910,8 @@
     {
       "code": "NU1104",
       "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\lromero\\Source\\Repos\\Mervi\\Mervi\\Basket.Infrastructure\\Basket.Infrastructure.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Mervi\\Basket.Infrastructure\\Basket.Infrastructure.csproj",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.1"
-      ]
-    },
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\lromero\\Source\\Repos\\Mervi\\Basket.DTOs\\Basket.DTOs.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Basket.DTOs\\Basket.DTOs.csproj",
+      "message": "Unable to find project 'C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Basket.Infrastructure\\Basket.Infrastructure.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Basket.Infrastructure\\Basket.Infrastructure.csproj",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.1"
       ]
