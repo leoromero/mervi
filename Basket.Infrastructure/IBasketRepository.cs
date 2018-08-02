@@ -1,5 +1,5 @@
 ﻿using Basket.Domain;
-using Basket.Infrastructure.Models;
+using Basket.DTOs;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -11,6 +11,6 @@ namespace Basket.Infrastructure
         IEnumerable<string> GetUsers();
         Task<CustomerBasket> UpdateBasketAsync(CustomerBasket basket);
         Task<bool> DeleteBasketAsync(string id);
-        ProductBasketsModel GetProductsBasketsAsync(string id);
+        Task<ProductBasketsDTO> GetProductsBasketsAsync(string id);
     }
 }

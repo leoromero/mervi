@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Basket.Domain;
+using Basket.DTOs;
 using Basket.Infrastructure.Models;
 using Newtonsoft.Json;
 using StackExchange.Redis;
@@ -51,7 +52,7 @@ namespace Basket.Infrastructure
             if (!created)
             {
                 //log
-                return null;
+                throw new Exception("There is a problem with the database, please try again in a few minutes.");
             }
             //items in oldBasket that are not in the new basket
             var toRemove = oldBasket.Items.Where(x => !basket.Items.Select(i => i.Id).Contains(x.Id)).ToList();
@@ -71,15 +72,15 @@ namespace Basket.Infrastructure
             return await GetBasketAsync(basket.BuyerId);
         }
 
-        public ProductBasketsModel GetProductsBasketsAsync(string id)
+        public async Task<ProductBasketsDTO> GetProductsBasketsAsync(string id)
         {
-            var data = _database.SetMembers(id);
+            var data = await _database.SetMembersAsync(id);
             if (data.Count() == 0)
             {
                 return null;
             }
 
-            var model = new ProductBasketsModel { Id = id, BasketsIds = data.Select(x => x.ToString()).ToList() };
+            var model = new ProductBasketsDTO { Id = id, BasketsIds = data.Select(x => x.ToString()).ToList() };
             return model;
         }
 
