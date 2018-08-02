@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <DockerComposeProjectPath>..\Mervi\docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>06519999-6985-4a19-8cd3-37c1a0027e67</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="StackExchange.Redis" Version="1.2.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Basket.DTOs\Basket.DTOs.csproj" />
+    <ProjectReference Include="..\Mervi\Basket.BL\Basket.BL.csproj" />
+    <ProjectReference Include="..\Mervi\Basket.Infrastructure\Basket.Infrastructure.csproj" />
+    <ProjectReference Include="..\Mervi\Common\EventBus\RabbitMQ\EventBusRabbitMQ.csproj" />
+  </ItemGroup>
+
+</Project>
