@@ -5,9 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Basket.DTOs\Basket.DTOs.csproj" />
+    <ProjectReference Include="..\..\..\Common\EventBus\EventBus\EventBus.csproj" />
+    <ProjectReference Include="..\Basket.DTOs\Basket.DTOs.csproj" />
     <ProjectReference Include="..\Basket.Infrastructure\Basket.Infrastructure.csproj" />
-    <ProjectReference Include="..\Common\EventBus\EventBus\EventBus.csproj" />
   </ItemGroup>
 
 </Project>

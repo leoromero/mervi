@@ -1352,6 +1352,16 @@
         "runtime": {
           "bin/placeholder/Basket.Domain.dll": {}
         }
+      },
+      "Basket.DTOs/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Basket.DTOs.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Basket.DTOs.dll": {}
+        }
       }
     }
   },
@@ -4684,12 +4694,17 @@
       "type": "project",
       "path": "../Basket.Domain/Basket.Domain.csproj",
       "msbuildProject": "../Basket.Domain/Basket.Domain.csproj"
+    },
+    "Basket.DTOs/1.0.0": {
+      "type": "project",
+      "path": "../Basket.DTOs/Basket.DTOs.csproj",
+      "msbuildProject": "../Basket.DTOs/Basket.DTOs.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Basket.DTOs >= 1.0.0",
       "Basket.Domain >= 1.0.0",
-      "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket.DTOs\\Basket.DTOs.csproj",
       "Microsoft.NETCore.App >= 2.1.0",
       "Newtonsoft.Json >= 11.0.2",
       "StackExchange.Redis >= 1.2.6"
@@ -4725,11 +4740,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket.DTOs\\Basket.DTOs.csproj": {
-              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket.DTOs\\Basket.DTOs.csproj"
-            },
             "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.Domain\\Basket.Domain.csproj": {
               "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.Domain\\Basket.Domain.csproj"
+            },
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.DTOs\\Basket.DTOs.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.DTOs\\Basket.DTOs.csproj"
             }
           }
         }
@@ -4765,16 +4780,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket.DTOs\\Basket.DTOs.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket.DTOs\\Basket.DTOs.csproj",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.1"
-      ]
-    }
-  ]
+  }
 }

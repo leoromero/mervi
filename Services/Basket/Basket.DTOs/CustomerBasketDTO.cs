@@ -5,6 +5,6 @@ namespace Basket.DTOs
     public class CustomerBasketDTO
     {
         public string BuyerId { get; set; }
-        public IEnumerable<BasketItemDTO> Items { get; set; }
+        public IList<BasketItemDTO> Items { get; set; }
     }
 }

@@ -7,6 +7,7 @@ using Basket.DTOs.Responses;
 using Basket.Infrastructure;
 using EventBus.Abstractions;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Basket.BL
@@ -19,9 +20,9 @@ namespace Basket.BL
 
         public BasketService(IBasketRepository repository, IEventBus eventBus, IMapper<CustomerBasket, CustomerBasketDTO> mapper)
         {
-            this.repository = repository;
-            this.eventBus = eventBus;
-            this.mapper = mapper;
+            this.repository = repository ?? throw new ArgumentNullException(nameof(repository));
+            this.eventBus = eventBus ?? throw new ArgumentNullException(nameof(eventBus));
+            this.mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
         public async Task<Response<bool>> Checkout(BasketCheckoutRequest basketCheckout)
@@ -43,13 +44,23 @@ namespace Basket.BL
 
         public async Task<CustomerBasketDTO> GetBasketAsync(string basketId)
         {
-            var basket = await repository.GetBasketAsync(basketId);
+            var basket = await GetBasketAsEntityAsync(basketId);
             return mapper.ToDto(basket);
         }
 
         public CustomerBasketDTO GetBasket(string basketId)
         {
             return Task.Run(() => GetBasketAsync(basketId)).Result;
+        }
+
+        private async Task<CustomerBasket> GetBasketAsEntityAsync(string basketId)
+        {
+            return await repository.GetBasketAsync(basketId);
+        }
+
+        private CustomerBasket GetBasketAsEntity(string basketId)
+        {
+            return Task.Run(() => GetBasketAsEntityAsync(basketId)).Result;
         }
 
         public async Task<ProductBasketsDTO> GetProductsBasketsAsync(string id)
@@ -68,7 +79,39 @@ namespace Basket.BL
             catch (Exception e)
             {
                 return ResponseFactory.GetBasketResponse(null, e.Message);
-            }            
+            }
+        }
+
+        public async Task UpdateProductPriceInAllBaskets(ProductPriceChangedIntegrationEvent @event)
+        {
+            var baskets = await GetProductsBasketsAsync(@event.ProductId.ToString());
+            var basketsIds = baskets.BasketsIds;
+
+            basketsIds.Distinct().ToList().ForEach(async basketId =>
+            {
+                var basket = await GetBasketAsEntityAsync(basketId);
+
+                await UpdatePriceInBasketItems(@event.ProductId, @event.NewPrice, @event.OldPrice, basket);
+            });
+        }
+        private async Task UpdatePriceInBasketItems(int productId, decimal newPrice, decimal oldPrice, CustomerBasket basket)
+        {
+            string match = productId.ToString();
+            var itemsToUpdate = basket?.Items?.Where(x => x.ProductId == match).ToList();
+
+            if (itemsToUpdate != null)
+            {
+                foreach (var item in itemsToUpdate)
+                {
+                    if (item.UnitPrice == oldPrice)
+                    {
+                        var originalPrice = item.UnitPrice;
+                        item.UnitPrice = newPrice;
+                        item.OldUnitPrice = originalPrice;
+                    }
+                }
+                await UpdateBasketAsync(mapper.ToDto(basket));
+            }
         }
     }
 }

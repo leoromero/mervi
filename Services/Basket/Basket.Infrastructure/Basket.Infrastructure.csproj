@@ -10,8 +10,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Basket.DTOs\Basket.DTOs.csproj" />
     <ProjectReference Include="..\Basket.Domain\Basket.Domain.csproj" />
+    <ProjectReference Include="..\Basket.DTOs\Basket.DTOs.csproj" />
   </ItemGroup>
 
 </Project>

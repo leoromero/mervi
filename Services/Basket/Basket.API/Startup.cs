@@ -1,9 +1,9 @@
 ﻿using System;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
-using Basket.API.IntegrationEvents.Events;
-using Basket.API.IntegrationEvents.Handlers;
 using Basket.BL;
+using Basket.BL.IntegrationEvents.Events;
+using Basket.BL.IntegrationEvents.Handlers;
 using Basket.BL.Interfaces;
 using Basket.Infrastructure;
 using EventBus;
@@ -106,7 +106,6 @@ namespace Basket.API
         private void RegisterEventBus(IServiceCollection services)
         {
             var subscriptionClientName = Configuration["SubscriptionClientName"];
-
 
             services.AddSingleton<IEventBus, EventBusRabbitMQ>(sp =>
             {

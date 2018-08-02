@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Basket.Domain;
 using Basket.DTOs;
-using Basket.Infrastructure.Models;
 using Newtonsoft.Json;
 using StackExchange.Redis;
 

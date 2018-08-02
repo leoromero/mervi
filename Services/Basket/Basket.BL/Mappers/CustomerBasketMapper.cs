@@ -1,26 +1,25 @@
-﻿using Basket.Domain;
+﻿using Basket.BL.Interfaces;
+using Basket.Domain;
 using Basket.DTOs;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace Basket.BL.Mappers
 {
     public class CustomerBasketMapper : Mapper<CustomerBasket, CustomerBasketDTO>
     {
-        public CustomerBasketDTO ToDto(CustomerBasket entity)
+        public override CustomerBasketDTO ToDto(CustomerBasket entity)
         {
             return new CustomerBasketDTO
             {
                 BuyerId = entity.BuyerId,
-                Items = new BasketItemMapper().ToDtos(entity.Items)
+                Items = new BasketItemMapper().ToDtos(entity.Items).ToList()
             };
         }
 
         public override CustomerBasket ToEntity(CustomerBasketDTO dto)
         {
             var basket = new CustomerBasket(dto.BuyerId);
-            basket.Items = new BasketItemMapper().ToEntities(dto.Items);
+            basket.Items = new BasketItemMapper().ToEntities(dto.Items).ToList();
 
             return basket;
         }

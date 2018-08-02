@@ -18,10 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\EventBus\RabbitMQ\EventBusRabbitMQ.csproj" />
+    <ProjectReference Include="..\Basket.BL\Basket.BL.csproj" />
     <ProjectReference Include="..\Basket.DTOs\Basket.DTOs.csproj" />
-    <ProjectReference Include="..\Mervi\Basket.BL\Basket.BL.csproj" />
-    <ProjectReference Include="..\Mervi\Basket.Infrastructure\Basket.Infrastructure.csproj" />
-    <ProjectReference Include="..\Mervi\Common\EventBus\RabbitMQ\EventBusRabbitMQ.csproj" />
+    <ProjectReference Include="..\Basket.Infrastructure\Basket.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
-﻿using Basket.Domain;
+﻿using Basket.BL.IntegrationEvents.Events;
+using Basket.Domain;
 using Basket.DTOs;
 using Basket.DTOs.Requests;
 using Basket.DTOs.Responses;
@@ -12,5 +13,6 @@ namespace Basket.BL.Interfaces
         Task<ProductBasketsDTO> GetProductsBasketsAsync(string id);
         Task<CustomerBasketDTO> GetBasketAsync(string basketId);
         Task<Response<CustomerBasketDTO>> UpdateBasketAsync(CustomerBasketDTO basket);
+        Task UpdateProductPriceInAllBaskets(ProductPriceChangedIntegrationEvent @event);
     }
 }

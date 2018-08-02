@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "Autofac/4.2.0": {
+      "Autofac/4.8.1": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.0",
@@ -2823,6 +2823,44 @@
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
         }
       },
+      "Polly/6.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Polly.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Polly.dll": {}
+        }
+      },
+      "RabbitMQ.Client/5.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Collections.Concurrent": "4.3.0",
+          "System.Console": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Net.NameResolution": "4.3.0",
+          "System.Net.Security": "4.3.0",
+          "System.Net.Sockets": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Thread": "4.3.0",
+          "System.Threading.Timer": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.5/RabbitMQ.Client.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/RabbitMQ.Client.dll": {}
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -4677,18 +4715,13 @@
           "ref/netstandard1.2/System.Threading.Timer.dll": {}
         }
       },
-      "System.ValueTuple/4.3.0": {
+      "System.ValueTuple/4.5.0": {
         "type": "package",
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "lib/netstandard1.0/System.ValueTuple.dll": {}
+          "ref/netcoreapp2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.0/System.ValueTuple.dll": {}
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Xml.ReaderWriter/4.3.0": {
@@ -4829,6 +4862,31 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "Basket.BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Basket.DTOs": "1.0.0",
+          "Basket.Infrastructure": "1.0.0",
+          "EventBus": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Basket.BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Basket.BL.dll": {}
+        }
+      },
+      "Basket.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Basket.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Basket.Domain.dll": {}
+        }
+      },
       "Basket.DTOs/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -4838,16 +4896,61 @@
         "runtime": {
           "bin/placeholder/Basket.DTOs.dll": {}
         }
+      },
+      "Basket.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Basket.DTOs": "1.0.0",
+          "Basket.Domain": "1.0.0",
+          "Newtonsoft.Json": "11.0.2",
+          "StackExchange.Redis": "1.2.6"
+        },
+        "compile": {
+          "bin/placeholder/Basket.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Basket.Infrastructure.dll": {}
+        }
+      },
+      "EventBus/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/EventBus.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EventBus.dll": {}
+        }
+      },
+      "EventBusRabbitMQ/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Autofac": "4.8.1",
+          "EventBus": "1.0.0",
+          "Microsoft.Extensions.Logging": "2.1.1",
+          "Newtonsoft.Json": "11.0.2",
+          "Polly": "6.0.1",
+          "RabbitMQ.Client": "5.1.0",
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "bin/placeholder/EventBusRabbitMQ.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EventBusRabbitMQ.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "Autofac/4.2.0": {
-      "sha512": "WHiPMqI8FYa4Mf4yTb0P/aBibHn7Z0B9r02CEXy9oAAkQMJpHxLOE45iIMMW+xthXu26V9nRIz7o5lA7V3ztgw==",
+    "Autofac/4.8.1": {
+      "sha512": "aIT9rupCOdab5RMfxvWTBmOxGU77tLqmvSF4V89SzV6oQcJrtuKw/Xp55xy9EijSktbMka55SbroAPOyT+lziw==",
       "type": "package",
-      "path": "autofac/4.2.0",
+      "path": "autofac/4.8.1",
       "files": [
-        "autofac.4.2.0.nupkg.sha512",
+        "autofac.4.8.1.nupkg.sha512",
         "autofac.nuspec",
         "lib/net45/Autofac.dll",
         "lib/net45/Autofac.xml",
@@ -7802,6 +7905,36 @@
         "lib/netstandard1.6/NuGet.Frameworks.xml",
         "nuget.frameworks.4.7.0.nupkg.sha512",
         "nuget.frameworks.nuspec"
+      ]
+    },
+    "Polly/6.0.1": {
+      "sha512": "nwL8qNLkrphkehUftQqJZOExH6sJ+PPWhkrksqoouAvy9TuEgYUjFujlUVC8PyYLIWIneR9R4opcFpPKn1HQ1A==",
+      "type": "package",
+      "path": "polly/6.0.1",
+      "files": [
+        "lib/netstandard1.1/Polly.deps.json",
+        "lib/netstandard1.1/Polly.dll",
+        "lib/netstandard1.1/Polly.pdb",
+        "lib/netstandard1.1/Polly.xml",
+        "lib/netstandard2.0/Polly.deps.json",
+        "lib/netstandard2.0/Polly.dll",
+        "lib/netstandard2.0/Polly.pdb",
+        "lib/netstandard2.0/Polly.xml",
+        "polly.6.0.1.nupkg.sha512",
+        "polly.nuspec"
+      ]
+    },
+    "RabbitMQ.Client/5.1.0": {
+      "sha512": "oMXzDw2NLDHYlAYVJs5AHZDGkTsuzmaAPNfHjgkPqq3VfnxAXgsJ643ts6xsdXJftpwPbDAwN5YP65lHm+MiNg==",
+      "type": "package",
+      "path": "rabbitmq.client/5.1.0",
+      "files": [
+        "lib/net451/RabbitMQ.Client.dll",
+        "lib/net451/RabbitMQ.Client.xml",
+        "lib/netstandard1.5/RabbitMQ.Client.dll",
+        "lib/netstandard1.5/RabbitMQ.Client.xml",
+        "rabbitmq.client.5.1.0.nupkg.sha512",
+        "rabbitmq.client.nuspec"
       ]
     },
     "Remotion.Linq/2.2.0": {
@@ -12450,19 +12583,47 @@
         "system.threading.timer.nuspec"
       ]
     },
-    "System.ValueTuple/4.3.0": {
-      "sha512": "cNLEvBX3d6MMQRZe3SMFNukVbitDAEpVZO17qa0/2FHxZ7Y7PpFRpr6m2615XYM/tYYYf0B+WyHNujqIw8Luwg==",
+    "System.ValueTuple/4.5.0": {
+      "sha512": "xZtSZNEHGa+tGsKuP4sh257vxJ/yemShz4EusmomkynMzuEDDjVaErBNewpzEF6swUgbcrSQAX3ELsEp1zCOwA==",
       "type": "package",
-      "path": "system.valuetuple/4.3.0",
+      "path": "system.valuetuple/4.5.0",
       "files": [
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/netstandard1.0/.xml",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.ValueTuple.dll",
+        "lib/net461/System.ValueTuple.xml",
+        "lib/net47/System.ValueTuple.dll",
+        "lib/net47/System.ValueTuple.xml",
+        "lib/netcoreapp2.0/_._",
         "lib/netstandard1.0/System.ValueTuple.dll",
-        "lib/portable-net40+sl4+win8+wp8/.xml",
+        "lib/netstandard1.0/System.ValueTuple.xml",
+        "lib/netstandard2.0/_._",
         "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
-        "system.valuetuple.4.3.0.nupkg.sha512",
-        "system.valuetuple.nuspec"
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.ValueTuple.dll",
+        "ref/net47/System.ValueTuple.dll",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/_._",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.valuetuple.4.5.0.nupkg.sha512",
+        "system.valuetuple.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Xml.ReaderWriter/4.3.0": {
@@ -12783,19 +12944,44 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "Basket.BL/1.0.0": {
+      "type": "project",
+      "path": "../Basket.BL/Basket.BL.csproj",
+      "msbuildProject": "../Basket.BL/Basket.BL.csproj"
+    },
+    "Basket.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Basket.Domain/Basket.Domain.csproj",
+      "msbuildProject": "../Basket.Domain/Basket.Domain.csproj"
+    },
     "Basket.DTOs/1.0.0": {
       "type": "project",
       "path": "../Basket.DTOs/Basket.DTOs.csproj",
       "msbuildProject": "../Basket.DTOs/Basket.DTOs.csproj"
+    },
+    "Basket.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Basket.Infrastructure/Basket.Infrastructure.csproj",
+      "msbuildProject": "../Basket.Infrastructure/Basket.Infrastructure.csproj"
+    },
+    "EventBus/1.0.0": {
+      "type": "project",
+      "path": "../../../Common/EventBus/EventBus/EventBus.csproj",
+      "msbuildProject": "../../../Common/EventBus/EventBus/EventBus.csproj"
+    },
+    "EventBusRabbitMQ/1.0.0": {
+      "type": "project",
+      "path": "../../../Common/EventBus/RabbitMQ/EventBusRabbitMQ.csproj",
+      "msbuildProject": "../../../Common/EventBus/RabbitMQ/EventBusRabbitMQ.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Autofac.Extensions.DependencyInjection >= 4.2.2",
+      "Basket.BL >= 1.0.0",
       "Basket.DTOs >= 1.0.0",
-      "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Basket.BL\\Basket.BL.csproj",
-      "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Basket.Infrastructure\\Basket.Infrastructure.csproj",
-      "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Common\\EventBus\\RabbitMQ\\EventBusRabbitMQ.csproj",
+      "Basket.Infrastructure >= 1.0.0",
+      "EventBusRabbitMQ >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1",
@@ -12832,17 +13018,17 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\EventBus\\RabbitMQ\\EventBusRabbitMQ.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\EventBus\\RabbitMQ\\EventBusRabbitMQ.csproj"
+            },
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.BL\\Basket.BL.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.BL\\Basket.BL.csproj"
+            },
             "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.DTOs\\Basket.DTOs.csproj": {
               "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.DTOs\\Basket.DTOs.csproj"
             },
-            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Basket.BL\\Basket.BL.csproj": {
-              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Basket.BL\\Basket.BL.csproj"
-            },
-            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Basket.Infrastructure\\Basket.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Basket.Infrastructure\\Basket.Infrastructure.csproj"
-            },
-            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Common\\EventBus\\RabbitMQ\\EventBusRabbitMQ.csproj": {
-              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Common\\EventBus\\RabbitMQ\\EventBusRabbitMQ.csproj"
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.Infrastructure\\Basket.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.Infrastructure\\Basket.Infrastructure.csproj"
             }
           }
         }
@@ -12887,34 +13073,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Common\\EventBus\\RabbitMQ\\EventBusRabbitMQ.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Common\\EventBus\\RabbitMQ\\EventBusRabbitMQ.csproj",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.1"
-      ]
-    },
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Basket.BL\\Basket.BL.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Basket.BL\\Basket.BL.csproj",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.1"
-      ]
-    },
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Basket.Infrastructure\\Basket.Infrastructure.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Mervi\\Basket.Infrastructure\\Basket.Infrastructure.csproj",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.1"
-      ]
-    }
-  ]
+  }
 }
