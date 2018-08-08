@@ -45,7 +45,7 @@ namespace Identity.API.Controllers
         {
             var claims = new[] {
                 new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
-                new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                new Claim(JwtRegisteredClaimNames.Email, user.Email != null? user.Email : string.Empty),
                 new Claim(JwtRegisteredClaimNames.GivenName, user.FullName)
             };
 
