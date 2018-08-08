@@ -1,14 +1,19 @@
 ﻿using System;
+using System.Text;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Basket.BL;
 using Basket.BL.IntegrationEvents.Events;
 using Basket.BL.IntegrationEvents.Handlers;
 using Basket.BL.Interfaces;
+using Basket.BL.Mappers;
+using Basket.Domain;
+using Basket.DTOs;
 using Basket.Infrastructure;
 using EventBus;
 using EventBus.Abstractions;
 using Mervi.Common.EventBus.EventBusRabbitMQ;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -17,6 +22,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using RabbitMQ.Client;
 using StackExchange.Redis;
 
@@ -34,9 +40,23 @@ namespace Basket.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = Configuration["Jwt:Issuer"],
+                    ValidAudience = Configuration["Jwt:Issuer"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
+                };
+            });
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
                 .AddControllersAsServices();
-
             //By connecting here we are making sure that our service
             //cannot start until redis is ready. This might slow down startup,
             //but given that there is a delay on resolving the ip address
@@ -94,7 +114,8 @@ namespace Basket.API
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<IBasketRepository, BasketRepository>();
             services.AddTransient<IBasketService, BasketService>();
-
+            services.AddTransient<IMapper<BasketItem, BasketItemDTO>, BasketItemMapper>();
+            services.AddTransient<IMapper<CustomerBasket, CustomerBasketDTO>, CustomerBasketMapper>();
             services.AddOptions();
 
             var container = new ContainerBuilder();
@@ -141,6 +162,8 @@ namespace Basket.API
             {
                 app.UseHsts();
             }
+
+            app.UseAuthentication();
 
             app.UseHttpsRedirection();
             app.UseMvc();

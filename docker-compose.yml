@@ -1,6 +1,9 @@
 version: '3.4'
 
 services:
+  sql.data:
+    image: microsoft/mssql-server-linux:2017-latest
+
   rabbitmq:
     image: rabbitmq:3-management-alpine
 
@@ -11,7 +14,16 @@ services:
     image: ${DOCKER_REGISTRY}basketapi
     build:
       context: .
-      dockerfile: ../Basket.API/Dockerfile
+      dockerfile: Services/Basket/Basket.API/Dockerfile
     depends_on:
     - rabbitmq
     - basket.data
+
+  identity.api:
+    image: ${DOCKER_REGISTRY}identityapi
+    build:
+      context: .
+      dockerfile: Services/Identity/Identity.API/Dockerfile
+    depends_on:
+    - sql.data
+

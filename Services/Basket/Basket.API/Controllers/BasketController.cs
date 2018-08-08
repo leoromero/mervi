@@ -6,6 +6,7 @@ using Basket.BL.Interfaces;
 using Basket.DTOs;
 using Basket.DTOs.Requests;
 using Basket.DTOs.Responses;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,30 +22,31 @@ namespace Basket.API.Controllers
         {
             this.service = service;
         }
+
         [HttpPost]
-        public ActionResult Checkout(BasketCheckoutRequest checkout)
+        public async Task<ActionResult> CheckoutAsync(BasketCheckoutRequest checkout)
         {
-            var result = Task.Run(() => service.Checkout(checkout)).Result;
+            var result = await service.Checkout(checkout);
             if (!result.Result)
                 return BadRequest(result);
 
             return Accepted(result);
         }
 
+        [Authorize]
         [HttpGet]
-        public ActionResult Get(string userId)
+        public async Task<ActionResult> GetAsync(string userId)
         {
-            //get userId from token
-            var result = Task.Run(() => service.GetBasketAsync(userId)).Result;
+            var result = await service.GetBasketAsync(userId);
 
             var response = ResponseFactory.GetBasketResponse(result);
             return Ok(response);
         }
 
         [HttpPost]
-        public ActionResult Post(CustomerBasketDTO basket)
+        public async Task<ActionResult> PostAsync(CustomerBasketDTO basket)
         {
-            var result = Task.Run(() => service.UpdateBasketAsync(basket)).Result;
+            var result = await service.UpdateBasketAsync(basket);
             if (result.Result == null)
                 return StatusCode(503, result);
 

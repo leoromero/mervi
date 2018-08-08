@@ -45,24 +45,14 @@ namespace Basket.BL
         public async Task<CustomerBasketDTO> GetBasketAsync(string basketId)
         {
             var basket = await GetBasketAsEntityAsync(basketId);
-            return mapper.ToDto(basket);
+            return basket != null ? mapper.ToDto(basket) : null;
         }
-
-        public CustomerBasketDTO GetBasket(string basketId)
-        {
-            return Task.Run(() => GetBasketAsync(basketId)).Result;
-        }
-
+        
         private async Task<CustomerBasket> GetBasketAsEntityAsync(string basketId)
         {
             return await repository.GetBasketAsync(basketId);
         }
-
-        private CustomerBasket GetBasketAsEntity(string basketId)
-        {
-            return Task.Run(() => GetBasketAsEntityAsync(basketId)).Result;
-        }
-
+        
         public async Task<ProductBasketsDTO> GetProductsBasketsAsync(string id)
         {
             return await repository.GetProductsBasketsAsync(id);
