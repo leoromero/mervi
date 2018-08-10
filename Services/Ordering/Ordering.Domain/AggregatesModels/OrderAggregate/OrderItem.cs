@@ -10,7 +10,7 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
     {
         public int ProductId { get; private set; }
 
-        private int providerId;
+        private string providerId;
         private string productName;
         private decimal unitPrice;
         private decimal discount;
@@ -19,7 +19,7 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
         public OrderItemStatus OrderItemStatus { get; private set; }
         private int orderItemStatusId;
 
-        public int GetProviderId() => providerId;
+        public string GetProviderId() => providerId;
 
         public string GetProductName() => productName;
 
@@ -35,7 +35,7 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
         {
         }
 
-        public OrderItem(int productId, int providerId, string productName, decimal unitPrice, decimal discount, string pictureUrl, int units)
+        public OrderItem(int productId, string providerId, string productName, decimal unitPrice, decimal discount, string pictureUrl, int units)
         {
             ProductId = productId;
             this.providerId = providerId;

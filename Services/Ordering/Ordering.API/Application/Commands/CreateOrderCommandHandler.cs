@@ -31,7 +31,7 @@ namespace Ordering.API.Application.Commands
 
             foreach (var item in message.OrderItems)
             {
-                order.AddOrderItem(item.ProductId, item.ProductId, item.ProductName, item.UnitPrice, item.Discount, item.PictureUrl, item.Units);
+                order.AddOrderItem(item.ProviderId, item.ProductId, item.ProductName, item.UnitPrice, item.Discount, item.PictureUrl, item.Units);
             }
 
             _orderRepository.Add(order);

@@ -34,7 +34,7 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
             this.orderStatusId = OrderStatus.Submitted.Id;
         }
 
-        public void AddOrderItem(int providerId, int productId, string productName, decimal unitPrice, decimal discount, string pictureUrl, int units = 1)
+        public void AddOrderItem(string providerId, int productId, string productName, decimal unitPrice, decimal discount, string pictureUrl, int units)
         {
 
             var existingOrderForProduct = orderItems.Where(o => o.ProductId == productId)
@@ -59,7 +59,7 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
                 orderItems.Add(orderItem);
             }
         }
-        
+
         public void SetBuyerId(string id)
         {
             buyerId = id;

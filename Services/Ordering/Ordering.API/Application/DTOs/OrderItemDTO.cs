@@ -18,5 +18,7 @@ namespace Ordering.API.Application.DTOs
         public int Units { get; set; }
 
         public string PictureUrl { get; set; }
+
+        public string ProviderId { get; set; }
     }
 }
