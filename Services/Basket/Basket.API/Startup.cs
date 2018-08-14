@@ -13,6 +13,7 @@ using Basket.Infrastructure;
 using EventBus;
 using EventBus.Abstractions;
 using Mervi.Common.EventBus.EventBusRabbitMQ;
+using Mervi.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

@@ -3,6 +3,7 @@ using Basket.BL;
 using Basket.BL.Interfaces;
 using Basket.BL.Mappers;
 using Basket.Infrastructure;
+using Mervi.Services.Interfaces;
 using System.Reflection;
 
 namespace Ordering.API.Infrastructure.AutofacModules

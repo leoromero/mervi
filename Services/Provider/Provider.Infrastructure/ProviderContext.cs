@@ -3,6 +3,7 @@ using Mervi.Infrastructure;
 using Mervi.SeedWork;
 using Microsoft.EntityFrameworkCore;
 using Provider.Domain.AggregatesModels.OrderAggregate;
+using Provider.Domain.AggregatesModels.ProviderAggregate;
 using Provider.Infrastructure.EntityConfigurations;
 using System;
 using System.Threading;
@@ -13,6 +14,7 @@ namespace Provider.Infrastructure
     public class ProviderContext : DbContext, IUnitOfWork
     {
         public DbSet<Order> Orders { get; set; }
+        public DbSet<Seller> Sellers { get; set; }
 
         private readonly IMediator _mediator;
 

@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Services\Mervi.Services\Mervi.Services.csproj" />
     <ProjectReference Include="..\Identity.DTOs\Identity.DTOs.csproj" />
     <ProjectReference Include="..\Identity.Infrastructure\Identity.Infrastructure.csproj" />
   </ItemGroup>

@@ -1,6 +1,6 @@
-﻿using Basket.BL.Interfaces;
-using Basket.Domain;
+﻿using Basket.Domain;
 using Basket.DTOs;
+using Mervi.Services.Mappers;
 using System.Linq;
 
 namespace Basket.BL.Mappers

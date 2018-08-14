@@ -3603,8 +3603,8 @@
     },
     "Mervi.Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../../../Mervi.Infrastructure/Mervi.Infrastructure.csproj",
-      "msbuildProject": "../../../Mervi.Infrastructure/Mervi.Infrastructure.csproj"
+      "path": "../../../Common/DDD/Infrastructure/Mervi.Infrastructure/Mervi.Infrastructure.csproj",
+      "msbuildProject": "../../../Common/DDD/Infrastructure/Mervi.Infrastructure/Mervi.Infrastructure.csproj"
     },
     "Mervi.SeedWork/1.0.0": {
       "type": "project",
@@ -3657,8 +3657,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Mervi.Infrastructure\\Mervi.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Mervi.Infrastructure\\Mervi.Infrastructure.csproj"
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\DDD\\Infrastructure\\Mervi.Infrastructure\\Mervi.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\DDD\\Infrastructure\\Mervi.Infrastructure\\Mervi.Infrastructure.csproj"
             },
             "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj": {
               "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Ordering\\Ordering.Domain\\Ordering.Domain.csproj"

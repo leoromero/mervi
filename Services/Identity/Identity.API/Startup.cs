@@ -6,6 +6,7 @@ using Identity.Infrastructure;
 using Identity.Services;
 using Identity.Services.Interfaces;
 using Identity.Services.Mappers;
+using Mervi.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

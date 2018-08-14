@@ -1388,6 +1388,16 @@
         "runtime": {
           "bin/placeholder/EventBus.dll": {}
         }
+      },
+      "Mervi.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Mervi.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mervi.Services.dll": {}
+        }
       }
     }
   },
@@ -4735,6 +4745,11 @@
       "type": "project",
       "path": "../../../Common/EventBus/EventBus/EventBus.csproj",
       "msbuildProject": "../../../Common/EventBus/EventBus/EventBus.csproj"
+    },
+    "Mervi.Services/1.0.0": {
+      "type": "project",
+      "path": "../../../Common/Services/Mervi.Services/Mervi.Services.csproj",
+      "msbuildProject": "../../../Common/Services/Mervi.Services/Mervi.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4742,6 +4757,7 @@
       "Basket.DTOs >= 1.0.0",
       "Basket.Infrastructure >= 1.0.0",
       "EventBus >= 1.0.0",
+      "Mervi.Services >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
@@ -4777,6 +4793,9 @@
           "projectReferences": {
             "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\EventBus\\EventBus\\EventBus.csproj": {
               "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\EventBus\\EventBus\\EventBus.csproj"
+            },
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\Services\\Mervi.Services\\Mervi.Services.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\Services\\Mervi.Services\\Mervi.Services.csproj"
             },
             "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.DTOs\\Basket.DTOs.csproj": {
               "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Basket\\Basket.DTOs\\Basket.DTOs.csproj"

@@ -1,15 +1,12 @@
-﻿using Ordering.API.Application.DTOs;
-using Ordering.API.Application.Model;
-using System;
+﻿using Ordering.API.Application.Model;
+using Ordering.DTOs.OrderAggregateDtos;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Ordering.API.Extensions
 {
     public static class BasketItemExtensions
     {
-        public static IEnumerable<OrderItemDTO> ToOrderItemsDTO(this IEnumerable<BasketItem> basketItems)
+        public static IEnumerable<OrderItemDto> ToOrderItemsDTO(this IEnumerable<BasketItem> basketItems)
         {
             foreach (var item in basketItems)
             {
@@ -17,9 +14,9 @@ namespace Ordering.API.Extensions
             }
         }
 
-        public static OrderItemDTO ToOrderItemDTO(this BasketItem item)
+        public static OrderItemDto ToOrderItemDTO(this BasketItem item)
         {
-            return new OrderItemDTO()
+            return new OrderItemDto()
             {
                 ProductId = int.TryParse(item.ProductId, out int id) ? id : -1,
                 ProductName = item.ProductName,

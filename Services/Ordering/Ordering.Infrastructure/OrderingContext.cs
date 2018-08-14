@@ -1,12 +1,13 @@
 ﻿using MediatR;
-using Mervi.Infrastructure;
 using Mervi.SeedWork;
 using Microsoft.EntityFrameworkCore;
+using Ordering.Domain.AggregatesModels.BuyerAggregate;
 using Ordering.Domain.AggregatesModels.OrderAggregate;
 using Ordering.Infrastructure.EntityConfigurations;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Mervi.Infrastructure;
 
 
 namespace Ordering.Infrastructure
@@ -14,6 +15,7 @@ namespace Ordering.Infrastructure
     public class OrderingContext : DbContext, IUnitOfWork
     {
         public DbSet<Order> Orders { get; set; }
+        public DbSet<Buyer> Buyers { get; internal set; }
 
         private readonly IMediator _mediator;
 

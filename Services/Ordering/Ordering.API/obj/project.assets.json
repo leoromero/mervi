@@ -29,7 +29,7 @@
           "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {}
         }
       },
-      "MediatR/5.0.1": {
+      "MediatR/5.1.0": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/MediatR.dll": {}
@@ -38,10 +38,10 @@
           "lib/netstandard2.0/MediatR.dll": {}
         }
       },
-      "MediatR.Extensions.Microsoft.DependencyInjection/5.0.1": {
+      "MediatR.Extensions.Microsoft.DependencyInjection/5.1.0": {
         "type": "package",
         "dependencies": {
-          "MediatR": "5.0.1",
+          "MediatR": "5.1.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0"
         },
         "compile": {
@@ -4906,6 +4906,16 @@
           "bin/placeholder/Mervi.SeedWork.dll": {}
         }
       },
+      "Mervi.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Mervi.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mervi.Services.dll": {}
+        }
+      },
       "Ordering.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -4918,6 +4928,16 @@
         },
         "runtime": {
           "bin/placeholder/Ordering.Domain.dll": {}
+        }
+      },
+      "Ordering.DTOs/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Ordering.DTOs.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ordering.DTOs.dll": {}
         }
       },
       "Ordering.Infrastructure/1.0.0": {
@@ -4964,25 +4984,25 @@
         "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.xml"
       ]
     },
-    "MediatR/5.0.1": {
-      "sha512": "SgJDOVGMUwC4E+cw4GTy3nv9gye+K68HXPpRselRXwdOgodpwdq6vTVQajyptk7AVhCzBD8c3ccYLhNRugfgfA==",
+    "MediatR/5.1.0": {
+      "sha512": "Xt0a7rxi3L9Hqds8dATA+lLdo7k+g6vryACCDjzSRodXY7axISBhUOO0uY/94YN6aPw2sfBpBSF+t9gw2J2eLA==",
       "type": "package",
-      "path": "mediatr/5.0.1",
+      "path": "mediatr/5.1.0",
       "files": [
         "lib/net45/MediatR.dll",
         "lib/netstandard1.3/MediatR.dll",
         "lib/netstandard2.0/MediatR.dll",
-        "mediatr.5.0.1.nupkg.sha512",
+        "mediatr.5.1.0.nupkg.sha512",
         "mediatr.nuspec"
       ]
     },
-    "MediatR.Extensions.Microsoft.DependencyInjection/5.0.1": {
-      "sha512": "xR/UDBBkRL+f2fSOb+zTjjMUOu2SyS/PizUE38ENmvDABKvnQsiCmb51C0eTRc3gsqBxuKoUOzPQNbqFjT7eug==",
+    "MediatR.Extensions.Microsoft.DependencyInjection/5.1.0": {
+      "sha512": "iFz9og0gyUUsbG9TBQfSxrnkOU6A9ZckGoswteeA+ip5Qvk0Bk60qJ5+AhXH/RCTxkSTNqQ3jP/gTmIWnFURsg==",
       "type": "package",
-      "path": "mediatr.extensions.microsoft.dependencyinjection/5.0.1",
+      "path": "mediatr.extensions.microsoft.dependencyinjection/5.1.0",
       "files": [
         "lib/netstandard2.0/MediatR.Extensions.Microsoft.DependencyInjection.dll",
-        "mediatr.extensions.microsoft.dependencyinjection.5.0.1.nupkg.sha512",
+        "mediatr.extensions.microsoft.dependencyinjection.5.1.0.nupkg.sha512",
         "mediatr.extensions.microsoft.dependencyinjection.nuspec"
       ]
     },
@@ -12958,18 +12978,28 @@
     },
     "Mervi.Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../../../Mervi.Infrastructure/Mervi.Infrastructure.csproj",
-      "msbuildProject": "../../../Mervi.Infrastructure/Mervi.Infrastructure.csproj"
+      "path": "../../../Common/DDD/Infrastructure/Mervi.Infrastructure/Mervi.Infrastructure.csproj",
+      "msbuildProject": "../../../Common/DDD/Infrastructure/Mervi.Infrastructure/Mervi.Infrastructure.csproj"
     },
     "Mervi.SeedWork/1.0.0": {
       "type": "project",
       "path": "../../../Common/DDD/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj",
       "msbuildProject": "../../../Common/DDD/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj"
     },
+    "Mervi.Services/1.0.0": {
+      "type": "project",
+      "path": "../../../Common/Services/Mervi.Services/Mervi.Services.csproj",
+      "msbuildProject": "../../../Common/Services/Mervi.Services/Mervi.Services.csproj"
+    },
     "Ordering.Domain/1.0.0": {
       "type": "project",
       "path": "../Ordering.Domain/Ordering.Domain.csproj",
       "msbuildProject": "../Ordering.Domain/Ordering.Domain.csproj"
+    },
+    "Ordering.DTOs/1.0.0": {
+      "type": "project",
+      "path": "../Ordering.DTOs/Ordering.DTOs.csproj",
+      "msbuildProject": "../Ordering.DTOs/Ordering.DTOs.csproj"
     },
     "Ordering.Infrastructure/1.0.0": {
       "type": "project",
@@ -12982,11 +13012,13 @@
       "Autofac.Extensions.DependencyInjection >= 4.2.2",
       "EventBus >= 1.0.0",
       "EventBusRabbitMQ >= 1.0.0",
-      "MediatR >= 5.0.1",
-      "MediatR.Extensions.Microsoft.DependencyInjection >= 5.0.1",
+      "MediatR >= 5.1.0",
+      "MediatR.Extensions.Microsoft.DependencyInjection >= 5.1.0",
+      "Mervi.Services >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1",
+      "Ordering.DTOs >= 1.0.0",
       "Ordering.Infrastructure >= 1.0.0"
     ]
   },
@@ -13026,6 +13058,12 @@
             "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\EventBus\\RabbitMQ\\EventBusRabbitMQ.csproj": {
               "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\EventBus\\RabbitMQ\\EventBusRabbitMQ.csproj"
             },
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\Services\\Mervi.Services\\Mervi.Services.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\Services\\Mervi.Services\\Mervi.Services.csproj"
+            },
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Ordering\\Ordering.DTOs\\Ordering.DTOs.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Ordering\\Ordering.DTOs\\Ordering.DTOs.csproj"
+            },
             "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Ordering\\Ordering.Infrastructure\\Ordering.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Ordering\\Ordering.Infrastructure\\Ordering.Infrastructure.csproj"
             }
@@ -13047,11 +13085,11 @@
           },
           "MediatR": {
             "target": "Package",
-            "version": "[5.0.1, )"
+            "version": "[5.1.0, )"
           },
           "MediatR.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
-            "version": "[5.0.1, )"
+            "version": "[5.1.0, )"
           },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",

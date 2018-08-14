@@ -1,20 +1,19 @@
 ﻿using MediatR;
-using Ordering.API.Application.DTOs;
 using Ordering.API.Application.Model;
 using Ordering.API.Extensions;
-using System;
+using Ordering.DTOs.OrderAggregateDtos;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
-using System.Threading.Tasks;
 
 namespace Ordering.API.Application.Commands
-{    [DataContract]
+{
+    [DataContract]
     public class CreateOrderCommand
         : IRequest<bool>
     {
         [DataMember]
-        private readonly List<OrderItemDTO> _orderItems;
+        private readonly List<OrderItemDto> _orderItems;
 
         [DataMember]
         public string UserId { get; private set; }
@@ -41,11 +40,11 @@ namespace Ordering.API.Application.Commands
         public string Comments { get; private set; }
 
         [DataMember]
-        public IEnumerable<OrderItemDTO> OrderItems => _orderItems;
+        public IEnumerable<OrderItemDto> OrderItems => _orderItems;
 
         public CreateOrderCommand()
         {
-            _orderItems = new List<OrderItemDTO>();
+            _orderItems = new List<OrderItemDto>();
         }
 
         public CreateOrderCommand(List<BasketItem> basketItems, string userId, string userName, string city,

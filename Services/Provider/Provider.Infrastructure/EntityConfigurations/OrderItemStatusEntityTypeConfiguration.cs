@@ -1,10 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Ordering.Domain.AggregatesModels.BuyerAggregate;
-using Ordering.Domain.AggregatesModels.OrderAggregate;
-using System;
+using Provider.Domain.AggregatesModels.OrderAggregate;
 
-namespace Ordering.Infrastructure.EntityConfigurations
+namespace Provider.Infrastructure.EntityConfigurations
 {
     public class OrderItemStatusEntityTypeConfiguration : IEntityTypeConfiguration<OrderItemStatus>
     {

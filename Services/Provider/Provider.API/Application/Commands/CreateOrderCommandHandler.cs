@@ -1,9 +1,6 @@
 ﻿using MediatR;
-using Ordering.Domain.AggregatesModels.OrderAggregate;
 using Provider.Domain.AggregatesModels.OrderAggregate;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 

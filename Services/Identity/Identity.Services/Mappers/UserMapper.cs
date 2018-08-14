@@ -1,10 +1,8 @@
 ﻿using Identity.Domain;
 using Identity.DTOs;
-using Identity.Services.Interfaces;
+using Mervi.Services.Interfaces;
+using Mervi.Services.Mappers;
 using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Identity.Services.Mappers
 {

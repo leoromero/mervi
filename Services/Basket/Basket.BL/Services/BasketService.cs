@@ -6,6 +6,7 @@ using Basket.DTOs.Requests;
 using Basket.DTOs.Responses;
 using Basket.Infrastructure;
 using EventBus.Abstractions;
+using Mervi.Services.Interfaces;
 using System;
 using System.Linq;
 using System.Threading.Tasks;

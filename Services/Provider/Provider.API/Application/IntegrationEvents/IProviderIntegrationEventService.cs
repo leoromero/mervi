@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Ordering.API.Application.IntegrationEvents
+namespace Provider.API.Application.IntegrationEvents
 {
     public interface IProviderIntegrationEventService
     {

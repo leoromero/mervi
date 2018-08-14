@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Common\DDD\Domain\Mervi.SeedWork\Mervi.SeedWork.csproj" />
-    <ProjectReference Include="..\..\..\Mervi.Infrastructure\Mervi.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\Common\DDD\Infrastructure\Mervi.Infrastructure\Mervi.Infrastructure.csproj" />
     <ProjectReference Include="..\Provider.Domain\Provider.Domain\Provider.Domain.csproj" />
   </ItemGroup>
 

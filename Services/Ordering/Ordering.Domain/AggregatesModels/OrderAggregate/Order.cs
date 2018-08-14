@@ -19,6 +19,9 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
         private int _orderStatusId;
 
         public string GetBuyerId => _buyerId;
+
+        public DateTime GetOrderDate => _orderDate;
+
         private string _buyerId;
 
         protected Order()

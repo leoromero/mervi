@@ -2315,7 +2315,8 @@
         "dependencies": {
           "Basket.DTOs": "1.0.0",
           "Basket.Infrastructure": "1.0.0",
-          "EventBus": "1.0.0"
+          "EventBus": "1.0.0",
+          "Mervi.Services": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Basket.BL.dll": {}
@@ -2381,6 +2382,16 @@
         },
         "runtime": {
           "bin/placeholder/Factory.dll": {}
+        }
+      },
+      "Mervi.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Mervi.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mervi.Services.dll": {}
         }
       }
     }
@@ -7412,6 +7423,11 @@
       "type": "project",
       "path": "../Factory/Factory.csproj",
       "msbuildProject": "../Factory/Factory.csproj"
+    },
+    "Mervi.Services/1.0.0": {
+      "type": "project",
+      "path": "../../../../Common/Services/Mervi.Services/Mervi.Services.csproj",
+      "msbuildProject": "../../../../Common/Services/Mervi.Services/Mervi.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {

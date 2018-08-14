@@ -1,8 +1,7 @@
 ﻿using Autofac;
-using Autofac.Core;
 using MediatR;
 using System.Reflection;
-using Ordering.API.Application.Commands;
+using Provider.API.Application.Commands;
 
 namespace Provider.API.Infrastructure.AutofacModules
 {
@@ -15,37 +14,6 @@ namespace Provider.API.Infrastructure.AutofacModules
 
             builder.RegisterAssemblyTypes(typeof(CreateOrderCommandHandler).GetTypeInfo().Assembly)
                 .AsClosedTypesOf(typeof(IRequestHandler<,>));
-
-            // Register the DomainEventHandler classes (they implement INotificationHandler<>) in assembly holding the Domain Events
-            //builder.RegisterAssemblyTypes(typeof(ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler).GetTypeInfo().Assembly)
-            //    .AsClosedTypesOf(typeof(INotificationHandler<>));
-
-            // Register the Command's Validators (Validators based on FluentValidation library)
-            //builder
-            //    .RegisterAssemblyTypes(typeof(CreateOrderCommandValidator).GetTypeInfo().Assembly)
-            //    .Where(t => t.IsClosedTypeOf(typeof(IValidator<>)))
-            //    .AsImplementedInterfaces();
-
-
-            //builder.Register<SingleInstanceFactory>(context =>
-            //{
-            //    var componentContext = context.Resolve<IComponentContext>();
-            //    return t => { object o; return componentContext.TryResolve(t, out o) ? o : null; };
-            //});
-
-            //builder.Register<MultiInstanceFactory>(context =>
-            //{
-            //    var componentContext = context.Resolve<IComponentContext>();
-
-            //    return t =>
-            //    {
-            //        var resolved = (IEnumerable<object>)componentContext.Resolve(typeof(IEnumerable<>).MakeGenericType(t));
-            //        return resolved;
-            //    };
-            //});
-
-            //builder.RegisterGeneric(typeof(LoggingBehavior<,>)).As(typeof(IPipelineBehavior<,>));
-            //builder.RegisterGeneric(typeof(ValidatorBehavior<,>)).As(typeof(IPipelineBehavior<,>));
         }
     }
 }

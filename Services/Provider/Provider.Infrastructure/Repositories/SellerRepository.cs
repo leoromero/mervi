@@ -1,10 +1,8 @@
 ﻿using Mervi.SeedWork;
 using Microsoft.EntityFrameworkCore;
-using Ordering.Domain.AggregatesModels.OrderAggregate;
 using Provider.Domain.AggregatesModels.OrderAggregate;
+using Provider.Domain.AggregatesModels.ProviderAggregate;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Provider.Infrastructure.Repositories
@@ -26,25 +24,22 @@ namespace Provider.Infrastructure.Repositories
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public Order Add(Order order)
+        public Seller Add(Seller seller)
         {
-            return _context.Orders.Add(order).Entity;
+            return _context.Sellers.Add(seller).Entity;
         }
 
-        public async Task<Order> GetAsync(int orderId)
+        public async Task<Seller> GetAsync(int sellerId)
         {
-            var order = await _context.Orders
-                .Include(o => o.OrderItems)
-                .Include(o => o.OrderStatus)
-                .Include(o => o.Address)
-                .SingleOrDefaultAsync(o => o.Id == orderId);
+            var order = await _context.Sellers
+                .SingleOrDefaultAsync(s => s.Id == sellerId);
 
             return order;
         }
 
-        public void Update(Order order)
+        public void Update(Seller seller)
         {
-            _context.Entry(order).State = EntityState.Modified;
+            _context.Entry(seller).State = EntityState.Modified;
         }
     }
 }

@@ -1384,6 +1384,16 @@
         "runtime": {
           "bin/placeholder/Identity.Infrastructure.dll": {}
         }
+      },
+      "Mervi.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Mervi.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mervi.Services.dll": {}
+        }
       }
     }
   },
@@ -4462,12 +4472,18 @@
       "type": "project",
       "path": "../Identity.Infrastructure/Identity.Infrastructure.csproj",
       "msbuildProject": "../Identity.Infrastructure/Identity.Infrastructure.csproj"
+    },
+    "Mervi.Services/1.0.0": {
+      "type": "project",
+      "path": "../../../Common/Services/Mervi.Services/Mervi.Services.csproj",
+      "msbuildProject": "../../../Common/Services/Mervi.Services/Mervi.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Identity.DTOs >= 1.0.0",
       "Identity.Infrastructure >= 1.0.0",
+      "Mervi.Services >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
@@ -4501,6 +4517,9 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\Services\\Mervi.Services\\Mervi.Services.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\Services\\Mervi.Services\\Mervi.Services.csproj"
+            },
             "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Identity\\Identity.DTOs\\Identity.DTOs.csproj": {
               "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Identity\\Identity.DTOs\\Identity.DTOs.csproj"
             },

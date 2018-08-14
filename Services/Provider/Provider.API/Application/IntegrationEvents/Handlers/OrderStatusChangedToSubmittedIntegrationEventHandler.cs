@@ -1,13 +1,12 @@
 ﻿using EventBus.Abstractions;
 using MediatR;
-using Ordering.API.Application.IntegrationEvents.Events;
 using Provider.API.Application.Commands;
-using Provider.API.Application.Model;
+using Provider.API.Application.IntegrationEvents.Events;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Ordering.API.Application.IntegrationEvents.Handlers
+namespace Provider.API.Application.IntegrationEvents.Handlers
 {
     public class OrderStatusChangedToSubmittedIntegrationEventHandler : IIntegrationEventHandler<OrderStatusChangedToSubmittedIntegrationEvent>
     {

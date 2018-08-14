@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Mervi.Infrastructure\Mervi.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\Common\DDD\Infrastructure\Mervi.Infrastructure\Mervi.Infrastructure.csproj" />
     <ProjectReference Include="..\Ordering.Domain\Ordering.Domain.csproj" />
   </ItemGroup>
 

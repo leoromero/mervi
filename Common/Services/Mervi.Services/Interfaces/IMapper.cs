@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Basket.BL.Interfaces
+namespace Mervi.Services.Interfaces
 {
     public interface IMapper<T, G>
     {

@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Common\DDD\Domain\Mervi.SeedWork\Mervi.SeedWork.csproj" />
+    <ProjectReference Include="..\..\Domain\Mervi.SeedWork\Mervi.SeedWork.csproj" />
   </ItemGroup>
 
 </Project>

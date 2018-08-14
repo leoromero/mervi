@@ -1,9 +1,7 @@
-﻿using Basket.BL.Interfaces;
-using System;
+﻿using Mervi.Services.Interfaces;
 using System.Collections.Generic;
-using System.Text;
 
-namespace Basket.BL.Mappers
+namespace Mervi.Services.Mappers
 {
     public abstract class Mapper<T, G> : IMapper<T, G>
     {

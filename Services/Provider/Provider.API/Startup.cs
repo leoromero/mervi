@@ -10,9 +10,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using Provider.API.Infrastructure;
 using Provider.Infrastructure;
 using MediatR;
+using Provider.API.Infrastructure.AutofacModules;
 
 namespace Provider.API
 {

@@ -2944,8 +2944,8 @@
     },
     "Mervi.SeedWork/1.0.0": {
       "type": "project",
-      "path": "../Common/DDD/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj",
-      "msbuildProject": "../Common/DDD/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj"
+      "path": "../../Domain/Mervi.SeedWork/Mervi.SeedWork.csproj",
+      "msbuildProject": "../../Domain/Mervi.SeedWork/Mervi.SeedWork.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2962,11 +2962,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Mervi.Infrastructure\\Mervi.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\DDD\\Infrastructure\\Mervi.Infrastructure\\Mervi.Infrastructure.csproj",
       "projectName": "Mervi.Infrastructure",
-      "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Mervi.Infrastructure\\Mervi.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\DDD\\Infrastructure\\Mervi.Infrastructure\\Mervi.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\lromero\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Mervi.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\DDD\\Infrastructure\\Mervi.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
