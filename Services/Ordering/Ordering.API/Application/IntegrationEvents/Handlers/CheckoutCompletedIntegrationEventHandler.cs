@@ -33,9 +33,7 @@ namespace Ordering.API.Application.IntegrationEvents.Handlers
             if (eventMsg.RequestId != Guid.Empty)
             {
                 var createOrderCommand = new CreateOrderCommand(eventMsg.Basket.Items, eventMsg.UserId, eventMsg.UserName, eventMsg.City, eventMsg.Street,
-                    eventMsg.State, eventMsg.Country, eventMsg.ZipCode,
-                    eventMsg.CardNumber, eventMsg.CardHolderName, eventMsg.CardExpiration,
-                    eventMsg.CardSecurityNumber, eventMsg.CardTypeId);
+                    eventMsg.State, eventMsg.Country, eventMsg.ZipCode);
 
                 result = await _mediator.Send(createOrderCommand);
             }

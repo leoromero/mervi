@@ -2,6 +2,55 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "Autofac/4.8.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "System.ComponentModel": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "Autofac.Extensions.DependencyInjection/4.2.2": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "4.2.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "MediatR/5.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MediatR.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MediatR.dll": {}
+        }
+      },
+      "MediatR.Extensions.Autofac.DependencyInjection/1.2.1": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "4.8.1",
+          "MediatR": "5.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/MediatR.Extensions.Autofac.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MediatR.Extensions.Autofac.DependencyInjection.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -2963,6 +3012,18 @@
           "lib/netstandard1.3/System.Collections.Specialized.dll": {}
         }
       },
+      "System.ComponentModel/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/System.ComponentModel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.ComponentModel.dll": {}
+        }
+      },
       "System.ComponentModel.Annotations/4.5.0": {
         "type": "package",
         "compile": {
@@ -4333,10 +4394,126 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "EventBus/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/EventBus.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EventBus.dll": {}
+        }
+      },
+      "Mervi.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Mervi.SeedWork": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.1.1"
+        },
+        "compile": {
+          "bin/placeholder/Mervi.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mervi.Infrastructure.dll": {}
+        }
+      },
+      "Mervi.SeedWork/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "MediatR": "5.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Mervi.SeedWork.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mervi.SeedWork.dll": {}
+        }
+      },
+      "Provider.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Mervi.SeedWork": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Provider.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Provider.Domain.dll": {}
+        }
+      },
+      "Provider.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Mervi.Infrastructure": "1.0.0",
+          "Mervi.SeedWork": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.1.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1",
+          "Microsoft.EntityFrameworkCore.Tools": "2.1.1",
+          "Provider.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Provider.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Provider.Infrastructure.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Autofac/4.8.1": {
+      "sha512": "aIT9rupCOdab5RMfxvWTBmOxGU77tLqmvSF4V89SzV6oQcJrtuKw/Xp55xy9EijSktbMka55SbroAPOyT+lziw==",
+      "type": "package",
+      "path": "autofac/4.8.1",
+      "files": [
+        "autofac.4.8.1.nupkg.sha512",
+        "autofac.nuspec",
+        "lib/net45/Autofac.dll",
+        "lib/net45/Autofac.xml",
+        "lib/netstandard1.1/Autofac.dll",
+        "lib/netstandard1.1/Autofac.xml"
+      ]
+    },
+    "Autofac.Extensions.DependencyInjection/4.2.2": {
+      "sha512": "nkspkD4qRKCvM1WG6bFLAuEwvbajEhEe7U3Q6XISCBEG6ZamOy52JACXnx3VumZksjPTylavkUZRzBBY7T2R+w==",
+      "type": "package",
+      "path": "autofac.extensions.dependencyinjection/4.2.2",
+      "files": [
+        "autofac.extensions.dependencyinjection.4.2.2.nupkg.sha512",
+        "autofac.extensions.dependencyinjection.nuspec",
+        "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll",
+        "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.xml"
+      ]
+    },
+    "MediatR/5.1.0": {
+      "sha512": "Xt0a7rxi3L9Hqds8dATA+lLdo7k+g6vryACCDjzSRodXY7axISBhUOO0uY/94YN6aPw2sfBpBSF+t9gw2J2eLA==",
+      "type": "package",
+      "path": "mediatr/5.1.0",
+      "files": [
+        "lib/net45/MediatR.dll",
+        "lib/netstandard1.3/MediatR.dll",
+        "lib/netstandard2.0/MediatR.dll",
+        "mediatr.5.1.0.nupkg.sha512",
+        "mediatr.nuspec"
+      ]
+    },
+    "MediatR.Extensions.Autofac.DependencyInjection/1.2.1": {
+      "sha512": "cDznWdX4tGi0dKxnpDEw2WVsmUtD21XVSJhl57rG6bA4DhAyYUxCvd79ipgo9ftGFa0k8kAV2F+b1CRBJkpJDw==",
+      "type": "package",
+      "path": "mediatr.extensions.autofac.dependencyinjection/1.2.1",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/MediatR.Extensions.Autofac.DependencyInjection.dll",
+        "lib/netstandard2.0/MediatR.Extensions.Autofac.DependencyInjection.pdb",
+        "mediatr.extensions.autofac.dependencyinjection.1.2.1.nupkg.sha512",
+        "mediatr.extensions.autofac.dependencyinjection.nuspec"
+      ]
+    },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "sha512": "rMDlyePoxggkmN/qgha1+BR2Uy+dOr38xKCQOPfVNKGY07R2nYJGMTKJFE1XFgwD70RYUNazf2fqutjJF18XgQ==",
       "type": "package",
@@ -7507,6 +7684,63 @@
         "ref/xamarinwatchos10/_._",
         "system.collections.specialized.4.3.0.nupkg.sha512",
         "system.collections.specialized.nuspec"
+      ]
+    },
+    "System.ComponentModel/4.0.1": {
+      "sha512": "oBZFnm7seFiVfugsIyOvQCWobNZs7FzqDV/B7tx20Ep/l3UUFCPDkdTnCNaJZTU27zjeODmy2C/cP60u3D4c9w==",
+      "type": "package",
+      "path": "system.componentmodel/4.0.1",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.ComponentModel.dll",
+        "lib/netstandard1.3/System.ComponentModel.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.ComponentModel.dll",
+        "ref/netcore50/System.ComponentModel.xml",
+        "ref/netcore50/de/System.ComponentModel.xml",
+        "ref/netcore50/es/System.ComponentModel.xml",
+        "ref/netcore50/fr/System.ComponentModel.xml",
+        "ref/netcore50/it/System.ComponentModel.xml",
+        "ref/netcore50/ja/System.ComponentModel.xml",
+        "ref/netcore50/ko/System.ComponentModel.xml",
+        "ref/netcore50/ru/System.ComponentModel.xml",
+        "ref/netcore50/zh-hans/System.ComponentModel.xml",
+        "ref/netcore50/zh-hant/System.ComponentModel.xml",
+        "ref/netstandard1.0/System.ComponentModel.dll",
+        "ref/netstandard1.0/System.ComponentModel.xml",
+        "ref/netstandard1.0/de/System.ComponentModel.xml",
+        "ref/netstandard1.0/es/System.ComponentModel.xml",
+        "ref/netstandard1.0/fr/System.ComponentModel.xml",
+        "ref/netstandard1.0/it/System.ComponentModel.xml",
+        "ref/netstandard1.0/ja/System.ComponentModel.xml",
+        "ref/netstandard1.0/ko/System.ComponentModel.xml",
+        "ref/netstandard1.0/ru/System.ComponentModel.xml",
+        "ref/netstandard1.0/zh-hans/System.ComponentModel.xml",
+        "ref/netstandard1.0/zh-hant/System.ComponentModel.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.componentmodel.4.0.1.nupkg.sha512",
+        "system.componentmodel.nuspec"
       ]
     },
     "System.ComponentModel.Annotations/4.5.0": {
@@ -11490,12 +11724,44 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "EventBus/1.0.0": {
+      "type": "project",
+      "path": "../../../Common/EventBus/EventBus/EventBus.csproj",
+      "msbuildProject": "../../../Common/EventBus/EventBus/EventBus.csproj"
+    },
+    "Mervi.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../../../Mervi.Infrastructure/Mervi.Infrastructure.csproj",
+      "msbuildProject": "../../../Mervi.Infrastructure/Mervi.Infrastructure.csproj"
+    },
+    "Mervi.SeedWork/1.0.0": {
+      "type": "project",
+      "path": "../../../Common/DDD/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj",
+      "msbuildProject": "../../../Common/DDD/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj"
+    },
+    "Provider.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Provider.Domain/Provider.Domain/Provider.Domain.csproj",
+      "msbuildProject": "../Provider.Domain/Provider.Domain/Provider.Domain.csproj"
+    },
+    "Provider.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Provider.Infrastructure/Provider.Infrastructure.csproj",
+      "msbuildProject": "../Provider.Infrastructure/Provider.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Autofac >= 4.8.1",
+      "Autofac.Extensions.DependencyInjection >= 4.2.2",
+      "EventBus >= 1.0.0",
+      "MediatR >= 5.1.0",
+      "MediatR.Extensions.Autofac.DependencyInjection >= 1.2.1",
       "Microsoft.AspNetCore.App >= 2.1.1",
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "Provider.Domain >= 1.0.0",
+      "Provider.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -11527,7 +11793,17 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\EventBus\\EventBus\\EventBus.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\EventBus\\EventBus\\EventBus.csproj"
+            },
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.Domain\\Provider.Domain\\Provider.Domain.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.Domain\\Provider.Domain\\Provider.Domain.csproj"
+            },
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.Infrastructure\\Provider.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.Infrastructure\\Provider.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -11539,6 +11815,22 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
+          "Autofac": {
+            "target": "Package",
+            "version": "[4.8.1, )"
+          },
+          "Autofac.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[4.2.2, )"
+          },
+          "MediatR": {
+            "target": "Package",
+            "version": "[5.1.0, )"
+          },
+          "MediatR.Extensions.Autofac.DependencyInjection": {
+            "target": "Package",
+            "version": "[1.2.1, )"
+          },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",

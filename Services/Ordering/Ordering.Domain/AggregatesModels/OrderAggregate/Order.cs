@@ -8,36 +8,36 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
 {
     public class Order : Entity, IAggregateRoot
     {
-        private DateTime orderDate;
+        private DateTime _orderDate;
 
-        private readonly List<OrderItem> orderItems;
-        public IReadOnlyCollection<OrderItem> OrderItems => orderItems;
+        private readonly List<OrderItem> _orderItems;
+        public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
 
         public Address Address { get; private set; }
 
         public OrderStatus OrderStatus { get; private set; }
-        private int orderStatusId;
+        private int _orderStatusId;
 
-        public string GetBuyerId => buyerId;
-        private string buyerId;
+        public string GetBuyerId => _buyerId;
+        private string _buyerId;
 
         protected Order()
         {
-            orderItems = new List<OrderItem>();
-            orderDate = DateTime.Now;
+            _orderItems = new List<OrderItem>();
+            _orderDate = DateTime.Now;
         }
 
         public Order(string buyerId, Address address) : this()
         {
-            this.buyerId = buyerId;
+            this._buyerId = buyerId;
             this.Address = address;
-            this.orderStatusId = OrderStatus.Submitted.Id;
+            this._orderStatusId = OrderStatus.Submitted.Id;
         }
 
         public void AddOrderItem(string providerId, int productId, string productName, decimal unitPrice, decimal discount, string pictureUrl, int units)
         {
 
-            var existingOrderForProduct = orderItems.Where(o => o.ProductId == productId)
+            var existingOrderForProduct = _orderItems.Where(o => o.ProductId == productId)
                  .SingleOrDefault();
 
             if (existingOrderForProduct != null)
@@ -56,13 +56,13 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
                 //add validated new order item
 
                 var orderItem = new OrderItem(productId, providerId, productName, unitPrice, discount, pictureUrl, units);
-                orderItems.Add(orderItem);
+                _orderItems.Add(orderItem);
             }
         }
 
         public void SetBuyerId(string id)
         {
-            buyerId = id;
+            _buyerId = id;
         }
     }
 }

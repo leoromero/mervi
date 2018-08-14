@@ -1,13 +1,14 @@
 ﻿using MediatR;
 using Mervi.SeedWork;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Ordering.Infrastructure
+namespace Mervi.Infrastructure
 {
-    static class MediatorExtension
+    public static class MediatorExtension
     {
-        public static async Task DispatchDomainEventsAsync(this IMediator mediator, OrderingContext ctx)
+        public static async Task DispatchDomainEventsAsync(this IMediator mediator, DbContext ctx)
         {
             var domainEntities = ctx.ChangeTracker
                 .Entries<Entity>()

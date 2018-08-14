@@ -38,21 +38,6 @@ namespace Ordering.API.Application.Commands
         public string ZipCode { get; private set; }
 
         [DataMember]
-        public string CardNumber { get; private set; }
-
-        [DataMember]
-        public string CardHolderName { get; private set; }
-
-        [DataMember]
-        public DateTime CardExpiration { get; private set; }
-
-        [DataMember]
-        public string CardSecurityNumber { get; private set; }
-
-        [DataMember]
-        public int CardTypeId { get; private set; }
-
-        [DataMember]
         public string Comments { get; private set; }
 
         [DataMember]
@@ -63,9 +48,8 @@ namespace Ordering.API.Application.Commands
             _orderItems = new List<OrderItemDTO>();
         }
 
-        public CreateOrderCommand(List<BasketItem> basketItems, string userId, string userName, string city, string street, string state, string country, string zipcode,
-            string cardNumber, string cardHolderName, DateTime cardExpiration,
-            string cardSecurityNumber, int cardTypeId) : this()
+        public CreateOrderCommand(List<BasketItem> basketItems, string userId, string userName, string city,
+            string street, string state, string country, string zipcode) : this()
         {
             _orderItems = basketItems.ToOrderItemsDTO().ToList();
             UserId = userId;
@@ -75,12 +59,6 @@ namespace Ordering.API.Application.Commands
             State = state;
             Country = country;
             ZipCode = zipcode;
-            CardNumber = cardNumber;
-            CardHolderName = cardHolderName;
-            CardExpiration = cardExpiration;
-            CardSecurityNumber = cardSecurityNumber;
-            CardTypeId = cardTypeId;
-            CardExpiration = cardExpiration;
         }
     }
 }

@@ -25,7 +25,9 @@ namespace Ordering.API.Extensions
                 ProductName = item.ProductName,
                 PictureUrl = item.PictureUrl,
                 UnitPrice = item.UnitPrice,
-                Units = item.Quantity
+                Units = item.Quantity,
+                Discount = item.Discount,
+                ProviderId = item.ProviderId                
             };
         }
     }

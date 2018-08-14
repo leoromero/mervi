@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Mervi.Infrastructure;
 using Mervi.SeedWork;
 using Microsoft.EntityFrameworkCore;
 using Ordering.Domain.AggregatesModels.OrderAggregate;
@@ -6,6 +7,7 @@ using Ordering.Infrastructure.EntityConfigurations;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+
 
 namespace Ordering.Infrastructure
 {

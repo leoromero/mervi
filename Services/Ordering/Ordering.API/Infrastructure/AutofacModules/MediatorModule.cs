@@ -1,11 +1,7 @@
 ﻿using Autofac;
 using MediatR;
 using Ordering.API.Application.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 
 namespace Ordering.API.Infrastructure.AutofacModules
 {

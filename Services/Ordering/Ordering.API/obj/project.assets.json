@@ -4879,6 +4879,20 @@
           "bin/placeholder/EventBusRabbitMQ.dll": {}
         }
       },
+      "Mervi.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Mervi.SeedWork": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.1.1"
+        },
+        "compile": {
+          "bin/placeholder/Mervi.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mervi.Infrastructure.dll": {}
+        }
+      },
       "Mervi.SeedWork/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -4910,6 +4924,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
+          "Mervi.Infrastructure": "1.0.0",
           "Microsoft.EntityFrameworkCore": "2.1.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1",
           "Microsoft.EntityFrameworkCore.Tools": "2.1.1",
@@ -12940,6 +12955,11 @@
       "type": "project",
       "path": "../../../Common/EventBus/RabbitMQ/EventBusRabbitMQ.csproj",
       "msbuildProject": "../../../Common/EventBus/RabbitMQ/EventBusRabbitMQ.csproj"
+    },
+    "Mervi.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../../../Mervi.Infrastructure/Mervi.Infrastructure.csproj",
+      "msbuildProject": "../../../Mervi.Infrastructure/Mervi.Infrastructure.csproj"
     },
     "Mervi.SeedWork/1.0.0": {
       "type": "project",

@@ -15,5 +15,6 @@ namespace Ordering.API.Application.Model
         public decimal OldUnitPrice { get; set; }
         public int Quantity { get; set; }
         public string PictureUrl { get; set; }
+        public decimal Discount { get; internal set; }
     }
 }
