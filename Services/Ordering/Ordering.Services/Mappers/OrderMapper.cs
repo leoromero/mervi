@@ -22,7 +22,7 @@ namespace Ordering.Services
             {
                 Id = entity.Id,
                 Address = string.Format("{0} {1}, {2}, {3}, {4}", entity.Address.Street, entity.Address.Number, entity.Address.City, entity.Address.Province, entity.Address.Country),
-                BuyerId = entity.GetBuyerId,
+                BuyerId = entity.GetBuyerId(),
                 OrderStatusName = entity.OrderStatus.Name,
                 OrderItems = orderItemsMapper.ToDtos(entity.OrderItems.ToList()).ToList(),
                 OrderDate = entity.GetOrderDate

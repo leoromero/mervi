@@ -1,4 +1,5 @@
 ﻿using Mervi.SeedWork;
+using Provider.Domain.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,10 @@ namespace Provider.Domain.AggregatesModels.OrderAggregate
             this._orderDate = orderDate;
             this._sellerId = sellerId;
             _orderStatusId = OrderStatus.Submitted.Id;
+
+            // Add the OrderStarterDomainEvent to the domain events collection 
+            // to be raised/dispatched when comitting changes into the Database [ After DbContext.SaveChanges() ]
+            AddOrderStartedDomainEvent();
         }
 
         public void AddOrderItem(int productId, string productName, decimal unitPrice, string pictureUrl, int units)
@@ -50,6 +55,13 @@ namespace Provider.Domain.AggregatesModels.OrderAggregate
                 var orderItem = new OrderItem(productId, productName, unitPrice, pictureUrl, units);
                 _orderItems.Add(orderItem);
             }
+        }
+
+        private void AddOrderStartedDomainEvent()
+        {
+            var orderStartedDomainEvent = new OrderStartedDomainEvent(this);
+
+            this.AddDomainEvent(orderStartedDomainEvent);
         }
     }
 }

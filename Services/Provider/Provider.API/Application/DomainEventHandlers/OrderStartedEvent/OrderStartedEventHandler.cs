@@ -27,12 +27,9 @@ namespace Provider.API.Application.DomainEventHandlers.OrderStartedEvent
 
         public async Task Handle(OrderStartedDomainEvent orderStartedEvent, CancellationToken cancellationToken)
         {
-           
-
             var order = _orderMapper.ToDto(orderStartedEvent.Order);
             var providerOrderStatusChangedTosubmittedIntegrationEvent = new ProviderOrderStatusChangedToSubmittedIntegrationEvent(order.Id, order.OrderStatusName, order.OrderItems);
             await _orderingIntegrationEventService.PublishThroughEventBusAsync(providerOrderStatusChangedTosubmittedIntegrationEvent);
-
         }
     }
 }

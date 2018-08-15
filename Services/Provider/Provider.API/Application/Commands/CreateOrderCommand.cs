@@ -1,7 +1,7 @@
 ﻿using MediatR;
-using Provider.API.Application.DTOs;
 using Provider.API.Application.Model;
 using Provider.API.Extensions;
+using Provider.DTOs.OrderAggregateDtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ namespace Provider.API.Application.Commands
         : IRequest<bool>
     {
         [DataMember]
-        private readonly List<OrderItemDTO> _orderItems;
+        private readonly List<OrderItemDto> _orderItems;
 
         [DataMember]
         public string UserId { get; private set; }
@@ -38,11 +38,11 @@ namespace Provider.API.Application.Commands
         public string ProviderId { get; internal set; }
 
         [DataMember]
-        public IEnumerable<OrderItemDTO> OrderItems => _orderItems;
+        public IEnumerable<OrderItemDto> OrderItems => _orderItems;
 
         public CreateOrderCommand()
         {
-            _orderItems = new List<OrderItemDTO>();
+            _orderItems = new List<OrderItemDto>();
         }
 
         public CreateOrderCommand(IList<CustomerOrderItem> customerOrderItems, string userId, string orderId, string userName,

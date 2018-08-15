@@ -17,6 +17,6 @@ namespace Ordering.DTOs.OrderAggregateDtos
 
         private int OrderStatusId { get; set; }
 
-        public string BuyerId { get; set; }
+        public int? BuyerId { get; set; }
     }
 }

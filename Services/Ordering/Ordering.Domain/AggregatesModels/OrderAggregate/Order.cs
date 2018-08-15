@@ -20,7 +20,7 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
         public OrderStatus OrderStatus { get; private set; }
         private int _orderStatusId;
 
-        public int? GetBuyerId => _buyerId;
+        public int? GetBuyerId() => _buyerId;
         private int? _buyerId;
 
         private Order()
