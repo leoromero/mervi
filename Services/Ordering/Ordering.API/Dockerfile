@@ -7,9 +7,13 @@ FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
 COPY Services/Ordering/Ordering.API/Ordering.API.csproj Services/Ordering/Ordering.API/
 COPY Common/EventBus/EventBus/EventBus.csproj Common/EventBus/EventBus/
+COPY Common/EventBus/RabbitMQ/EventBusRabbitMQ.csproj Common/EventBus/RabbitMQ/
+COPY Services/Ordering/Ordering.DTOs/Ordering.DTOs.csproj Services/Ordering/Ordering.DTOs/
+COPY Common/Services/Mervi.Services/Mervi.Services.csproj Common/Services/Mervi.Services/
 COPY Services/Ordering/Ordering.Infrastructure/Ordering.Infrastructure.csproj Services/Ordering/Ordering.Infrastructure/
-COPY Services/Ordering/Ordering.Domain/Ordering.Domain.csproj Services/Ordering/Ordering.Domain/
+COPY Common/DDD/Infrastructure/Mervi.Infrastructure/Mervi.Infrastructure.csproj Common/DDD/Infrastructure/Mervi.Infrastructure/
 COPY Common/DDD/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj Common/DDD/Domain/Mervi.SeedWork/
+COPY Services/Ordering/Ordering.Domain/Ordering.Domain.csproj Services/Ordering/Ordering.Domain/
 RUN dotnet restore Services/Ordering/Ordering.API/Ordering.API.csproj
 COPY . .
 WORKDIR /src/Services/Ordering/Ordering.API

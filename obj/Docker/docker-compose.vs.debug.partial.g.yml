@@ -1,0 +1,75 @@
+version: '3.4'
+
+services:
+  basket.api:
+    image: basketapi:dev
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_basket.api$
+    volumes:
+      - C:\Users\lromero\Source\Repos\Mervi\Services\Basket\Basket.API:/app
+      - C:\Users\lromero\vsdbg\vs2017u5:/remote_debugger:ro
+#$nuget_volume_mapping_basket.api$
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_basket.api$ bin/Debug/netcoreapp2.1/Basket.API.dll"
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/bash -c \"if PID=$$(pidof -x dotnet); then kill $$PID; fi\""
+
+  identity.api:
+    image: identityapi:dev
+    build:
+      target: base
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_identity.api$
+    volumes:
+      - C:\Users\lromero\Source\Repos\Mervi\Services\Identity\Identity.API:/app
+      - C:\Users\lromero\vsdbg\vs2017u5:/remote_debugger:ro
+#$nuget_volume_mapping_identity.api$
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_identity.api$ bin/Debug/netcoreapp2.1/Identity.API.dll"
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/bash -c \"if PID=$$(pidof -x dotnet); then kill $$PID; fi\""
+
+
+  ordering.api:
+    image: orderingapi:dev
+    build:
+      target: base
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_ordering.api$
+    volumes:
+      - C:\Users\lromero\Source\Repos\Mervi\Services\Ordering\Ordering.API:/app
+      - C:\Users\lromero\vsdbg\vs2017u5:/remote_debugger:ro
+#$nuget_volume_mapping_ordering.api$
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_ordering.api$ bin/Debug/netcoreapp2.1/Ordering.API.dll"
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/bash -c \"if PID=$$(pidof -x dotnet); then kill $$PID; fi\""
+
+
+  provider.api:
+    image: providerapi:dev
+    build:
+      target: base
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_provider.api$
+    volumes:
+      - C:\Users\lromero\Source\Repos\Mervi\Services\Provider\Provider.API:/app
+      - C:\Users\lromero\vsdbg\vs2017u5:/remote_debugger:ro
+#$nuget_volume_mapping_provider.api$
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_provider.api$ bin/Debug/netcoreapp2.1/Provider.API.dll"
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/bash -c \"if PID=$$(pidof -x dotnet); then kill $$PID; fi\""
+

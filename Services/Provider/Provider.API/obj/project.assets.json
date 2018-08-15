@@ -4432,6 +4432,16 @@
           "bin/placeholder/Mervi.SeedWork.dll": {}
         }
       },
+      "Mervi.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Mervi.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mervi.Services.dll": {}
+        }
+      },
       "Provider.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -4443,6 +4453,16 @@
         },
         "runtime": {
           "bin/placeholder/Provider.Domain.dll": {}
+        }
+      },
+      "Provider.DTOs/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Provider.DTOs.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Provider.DTOs.dll": {}
         }
       },
       "Provider.Infrastructure/1.0.0": {
@@ -11738,10 +11758,20 @@
       "path": "../../../Common/DDD/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj",
       "msbuildProject": "../../../Common/DDD/Domain/Mervi.SeedWork/Mervi.SeedWork.csproj"
     },
+    "Mervi.Services/1.0.0": {
+      "type": "project",
+      "path": "../../../Common/Services/Mervi.Services/Mervi.Services.csproj",
+      "msbuildProject": "../../../Common/Services/Mervi.Services/Mervi.Services.csproj"
+    },
     "Provider.Domain/1.0.0": {
       "type": "project",
       "path": "../Provider.Domain/Provider.Domain/Provider.Domain.csproj",
       "msbuildProject": "../Provider.Domain/Provider.Domain/Provider.Domain.csproj"
+    },
+    "Provider.DTOs/1.0.0": {
+      "type": "project",
+      "path": "../Provider.DTOs/Provider.DTOs.csproj",
+      "msbuildProject": "../Provider.DTOs/Provider.DTOs.csproj"
     },
     "Provider.Infrastructure/1.0.0": {
       "type": "project",
@@ -11756,8 +11786,10 @@
       "EventBus >= 1.0.0",
       "MediatR >= 5.1.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 5.1.0",
+      "Mervi.Services >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0",
+      "Provider.DTOs >= 1.0.0",
       "Provider.Domain >= 1.0.0",
       "Provider.Infrastructure >= 1.0.0"
     ]
@@ -11795,8 +11827,14 @@
             "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\EventBus\\EventBus\\EventBus.csproj": {
               "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\EventBus\\EventBus\\EventBus.csproj"
             },
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\Services\\Mervi.Services\\Mervi.Services.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\Services\\Mervi.Services\\Mervi.Services.csproj"
+            },
             "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.Domain\\Provider.Domain\\Provider.Domain.csproj": {
               "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.Domain\\Provider.Domain\\Provider.Domain.csproj"
+            },
+            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.DTOs\\Provider.DTOs.csproj": {
+              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.DTOs\\Provider.DTOs.csproj"
             },
             "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.Infrastructure\\Provider.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.Infrastructure\\Provider.Infrastructure.csproj"

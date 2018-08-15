@@ -32,7 +32,7 @@ namespace Provider.Infrastructure.Repositories
         {
             var order = await _context.Orders
                 .Include(o => o.OrderItems)
-                .Include(o => o.OrderStatus)
+                .Include(o => o.Status)
                 .SingleOrDefaultAsync(o => o.Id == orderId);
 
             return order;

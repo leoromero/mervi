@@ -20,11 +20,7 @@ namespace Provider.API.Application.Commands
 
         public async Task<bool> Handle(CreateOrderCommand message, CancellationToken cancellationToken)
         {
-            // Add/Update the Buyer AggregateRoot
-            // DDD patterns comment: Add child entities and value-objects through the Order Aggregate-Root
-            // methods and constructor so validations, invariants and business logic 
-            // make sure that consistency is preserved across the whole aggregate
-            var order = new Order(message.UserId, message.ProviderId, message.OrderId, message.OrderDate);
+            var order = new Order( message.ProviderId, message.OrderId, message.OrderDate);
 
             foreach (var item in message.OrderItems)
             {

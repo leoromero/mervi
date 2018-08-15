@@ -1,4 +1,5 @@
 ﻿using Mervi.SeedWork;
+using Ordering.Domain.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,8 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
 {
     public class Order : Entity, IAggregateRoot
     {
-        private DateTime _orderDate;
+        public DateTime GetOrderDate => _orderDate;
+        private readonly DateTime _orderDate;
 
         private readonly List<OrderItem> _orderItems;
         public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
@@ -18,23 +20,24 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
         public OrderStatus OrderStatus { get; private set; }
         private int _orderStatusId;
 
-        public string GetBuyerId => _buyerId;
+        public int? GetBuyerId => _buyerId;
+        private int? _buyerId;
 
-        public DateTime GetOrderDate => _orderDate;
-
-        private string _buyerId;
-
-        protected Order()
+        private Order()
         {
             _orderItems = new List<OrderItem>();
             _orderDate = DateTime.Now;
         }
 
-        public Order(string buyerId, Address address) : this()
+        public Order(string userId, string userName, Address address, int? buyerId = null) : this()
         {
             this._buyerId = buyerId;
             this.Address = address;
             this._orderStatusId = OrderStatus.Submitted.Id;
+
+            // Add the OrderStarterDomainEvent to the domain events collection 
+            // to be raised/dispatched when comitting changes into the Database [ After DbContext.SaveChanges() ]
+            AddOrderStartedDomainEvent(userId, userName);
         }
 
         public void AddOrderItem(string providerId, int productId, string productName, decimal unitPrice, decimal discount, string pictureUrl, int units)
@@ -63,9 +66,17 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
             }
         }
 
-        public void SetBuyerId(string id)
+        public void SetBuyerId(int id)
         {
             _buyerId = id;
         }
+
+        private void AddOrderStartedDomainEvent(string userId, string userName)
+        {
+            var orderStartedDomainEvent = new OrderStartedDomainEvent(this, userId, userName);
+
+            this.AddDomainEvent(orderStartedDomainEvent);
+        }
+
     }
 }

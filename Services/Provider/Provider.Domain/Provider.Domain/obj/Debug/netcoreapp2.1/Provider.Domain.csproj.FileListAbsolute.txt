@@ -3,10 +3,10 @@ C:\Users\lromero\Source\Repos\Mervi\Services\Provider\Provider.Domain\Provider.D
 C:\Users\lromero\Source\Repos\Mervi\Services\Provider\Provider.Domain\Provider.Domain\bin\Debug\netcoreapp2.1\Provider.Domain.pdb
 C:\Users\lromero\Source\Repos\Mervi\Services\Provider\Provider.Domain\Provider.Domain\bin\Debug\netcoreapp2.1\Mervi.SeedWork.dll
 C:\Users\lromero\Source\Repos\Mervi\Services\Provider\Provider.Domain\Provider.Domain\bin\Debug\netcoreapp2.1\Mervi.SeedWork.pdb
-C:\Users\lromero\Source\Repos\Mervi\Services\Provider\Provider.Domain\Provider.Domain\obj\Debug\netcoreapp2.1\Provider.Domain.csprojAssemblyReference.cache
 C:\Users\lromero\Source\Repos\Mervi\Services\Provider\Provider.Domain\Provider.Domain\obj\Debug\netcoreapp2.1\Provider.Domain.csproj.CoreCompileInputs.cache
 C:\Users\lromero\Source\Repos\Mervi\Services\Provider\Provider.Domain\Provider.Domain\obj\Debug\netcoreapp2.1\Provider.Domain.AssemblyInfoInputs.cache
 C:\Users\lromero\Source\Repos\Mervi\Services\Provider\Provider.Domain\Provider.Domain\obj\Debug\netcoreapp2.1\Provider.Domain.AssemblyInfo.cs
 C:\Users\lromero\Source\Repos\Mervi\Services\Provider\Provider.Domain\Provider.Domain\obj\Debug\netcoreapp2.1\Provider.Domain.csproj.CopyComplete
 C:\Users\lromero\Source\Repos\Mervi\Services\Provider\Provider.Domain\Provider.Domain\obj\Debug\netcoreapp2.1\Provider.Domain.dll
 C:\Users\lromero\Source\Repos\Mervi\Services\Provider\Provider.Domain\Provider.Domain\obj\Debug\netcoreapp2.1\Provider.Domain.pdb
+C:\Users\lromero\Source\Repos\Mervi\Services\Provider\Provider.Domain\Provider.Domain\obj\Debug\netcoreapp2.1\Provider.Domain.csprojAssemblyReference.cache

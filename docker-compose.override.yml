@@ -21,7 +21,7 @@ services:
     ports:
       - "15672:15672"
       - "5672:5672"  
-
+  
   basket.data:
     ports:
       - "15673:15673"
@@ -45,5 +45,27 @@ services:
       - ACCEPT_EULA=Y
     ports:
       - "1433:1433"    # Important: In a production environment your should remove the external port
+    
+  ordering.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_HTTPS_PORT=44320
+    ports:
+      - "52430:80"
+      - "44320:443"
     volumes:
-      - <host directory>:/var/opt/mssql
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+  provider.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_HTTPS_PORT=44333
+    ports:
+      - "54472:80"
+      - "44333:443"
+    volumes:
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro

@@ -8,26 +8,32 @@ namespace Provider.Domain.AggregatesModels.OrderAggregate
 {
     public class Order : Entity, IAggregateRoot
     {
-        public string UserId { get; private set; }
-        private DateTime _orderDate;
+        public DateTime GetOrderDate() => _orderDate;
+        private readonly DateTime _orderDate;
 
         private readonly List<OrderItem> _orderItems;
         public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
 
-        public OrderStatus OrderStatus { get; private set; }
+        public OrderStatus Status { get; private set; }
         private int _orderStatusId;
 
-        public string CustomerOrderId { get; private set; }
+        public string GetCustomerOrderId() => _customerOrderId;
+        private readonly string _customerOrderId; 
 
-        public string GetSellerId => _sellerId;
-        private string _sellerId;
+        public string GetSellerId() => _sellerId;
+        private readonly string _sellerId;
 
-        public Order(string userId, string sellerId, string customerOrderId, DateTime orderDate)
+        private Order()
         {
-            UserId = userId;
-            CustomerOrderId = customerOrderId;
+            this._orderItems = new List<OrderItem>();
+        }
+
+        public Order(string sellerId, string customerOrderId, DateTime orderDate) : base()
+        {
+            _customerOrderId = customerOrderId;
             this._orderDate = orderDate;
             this._sellerId = sellerId;
+            _orderStatusId = OrderStatus.Submitted.Id;
         }
 
         public void AddOrderItem(int productId, string productName, decimal unitPrice, string pictureUrl, int units)

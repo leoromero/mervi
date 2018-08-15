@@ -9,22 +9,22 @@ namespace Provider.API.Application.IntegrationEvents
     public class ProviderIntegrationEventService : IProviderIntegrationEventService
     {
         private readonly IEventBus _eventBus;
-        private readonly ProviderContext _orderingContext;
+        private readonly ProviderContext _providerContext;
 
-        public ProviderIntegrationEventService(IEventBus eventBus, ProviderContext orderingContext)
+        public ProviderIntegrationEventService(IEventBus eventBus, ProviderContext providerContext)
         {
-            _orderingContext = orderingContext ?? throw new ArgumentNullException(nameof(orderingContext));
+            _providerContext = providerContext ?? throw new ArgumentNullException(nameof(providerContext));
             _eventBus = eventBus ?? throw new ArgumentNullException(nameof(eventBus));
         }
         public async Task PublishThroughEventBusAsync(IntegrationEvent evt)
         {
-            await SaveEventAndOrderingContextChangesAsync(evt);
+            await SaveEventAndProviderContextChangesAsync(evt);
             _eventBus.Publish(evt);
         }
 
-        private async Task SaveEventAndOrderingContextChangesAsync(IntegrationEvent evt)
+        private async Task SaveEventAndProviderContextChangesAsync(IntegrationEvent evt)
         {
-             await _orderingContext.SaveChangesAsync();
+             await _providerContext.SaveChangesAsync();
         }
     }
 }

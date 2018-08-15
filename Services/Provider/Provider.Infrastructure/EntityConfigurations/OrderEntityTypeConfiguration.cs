@@ -17,18 +17,17 @@ namespace Provider.Infrastructure.EntityConfigurations
 
             orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
             orderConfiguration.Property<int>("OrderStatusId").IsRequired();
-            orderConfiguration.Property(x => x.CustomerOrderId).IsRequired();
+            orderConfiguration.Property<string>("CustomerOrderId").IsRequired();
 
             orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems))
                 .SetPropertyAccessMode(PropertyAccessMode.Field);
-
 
             orderConfiguration.HasOne<Seller>()
                 .WithMany()
                 .IsRequired()
                 .HasForeignKey("SellerId");
 
-            orderConfiguration.HasOne(o => o.OrderStatus)
+            orderConfiguration.HasOne(o => o.Status)
                 .WithMany()
                 .HasForeignKey("OrderStatusId");
         }

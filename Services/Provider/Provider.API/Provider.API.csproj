@@ -21,7 +21,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Common\EventBus\EventBus\EventBus.csproj" />
+    <ProjectReference Include="..\..\..\Common\Services\Mervi.Services\Mervi.Services.csproj" />
     <ProjectReference Include="..\Provider.Domain\Provider.Domain\Provider.Domain.csproj" />
+    <ProjectReference Include="..\Provider.DTOs\Provider.DTOs.csproj" />
     <ProjectReference Include="..\Provider.Infrastructure\Provider.Infrastructure.csproj" />
   </ItemGroup>
 

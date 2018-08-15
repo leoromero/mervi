@@ -69,19 +69,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.DTOs", "Services\I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Services", "Services\Identity\Identity.Services\Identity.Services.csproj", "{D22D0456-36E7-4545-B23A-E11D4323F00E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Provider.Infrastructure", "Services\Provider\Provider.Infrastructure\Provider.Infrastructure.csproj", "{BA83127C-13DF-4A52-9A5E-F276D2B1A72F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Provider.Infrastructure", "Services\Provider\Provider.Infrastructure\Provider.Infrastructure.csproj", "{BA83127C-13DF-4A52-9A5E-F276D2B1A72F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{E09B5380-4698-4F82-A1CB-E93C7E99F1F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.DTOs", "Services\Ordering\Ordering.DTOs\Ordering.DTOs.csproj", "{315DD9DB-A9B4-4736-A37B-DAFDF285477B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.DTOs", "Services\Ordering\Ordering.DTOs\Ordering.DTOs.csproj", "{315DD9DB-A9B4-4736-A37B-DAFDF285477B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Services", "Services\Ordering\Ordering.Services\Ordering.Services.csproj", "{01DFE2F7-562F-4006-96CF-1CE34FA48AB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Services", "Services\Ordering\Ordering.Services\Ordering.Services.csproj", "{01DFE2F7-562F-4006-96CF-1CE34FA48AB2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{63962D41-8EC1-4721-8B9D-85F02A64A301}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mervi.Services", "Common\Services\Mervi.Services\Mervi.Services.csproj", "{71FB0E0A-BAB7-4B91-9498-22E7962C0BC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mervi.Services", "Common\Services\Mervi.Services\Mervi.Services.csproj", "{71FB0E0A-BAB7-4B91-9498-22E7962C0BC5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mervi.Infrastructure", "Common\DDD\Infrastructure\Mervi.Infrastructure\Mervi.Infrastructure.csproj", "{7E7A583D-3103-403F-8E44-46296A6082DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Provider.DTOs", "Services\Provider\Provider.DTOs\Provider.DTOs.csproj", "{792BD67E-439D-4A1B-87CA-975E3D13D832}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Provider.Services", "Services\Provider\Provider.Services\Provider.Services.csproj", "{06B46A00-F2B3-458F-832A-9DC926564CEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -193,6 +197,14 @@ Global
 		{7E7A583D-3103-403F-8E44-46296A6082DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E7A583D-3103-403F-8E44-46296A6082DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E7A583D-3103-403F-8E44-46296A6082DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{792BD67E-439D-4A1B-87CA-975E3D13D832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{792BD67E-439D-4A1B-87CA-975E3D13D832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{792BD67E-439D-4A1B-87CA-975E3D13D832}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{792BD67E-439D-4A1B-87CA-975E3D13D832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06B46A00-F2B3-458F-832A-9DC926564CEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06B46A00-F2B3-458F-832A-9DC926564CEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06B46A00-F2B3-458F-832A-9DC926564CEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06B46A00-F2B3-458F-832A-9DC926564CEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -234,6 +246,8 @@ Global
 		{63962D41-8EC1-4721-8B9D-85F02A64A301} = {91E0ABB7-C267-458C-8423-E565E37543E0}
 		{71FB0E0A-BAB7-4B91-9498-22E7962C0BC5} = {63962D41-8EC1-4721-8B9D-85F02A64A301}
 		{7E7A583D-3103-403F-8E44-46296A6082DF} = {E09B5380-4698-4F82-A1CB-E93C7E99F1F3}
+		{792BD67E-439D-4A1B-87CA-975E3D13D832} = {FDF652C9-5CCB-40EF-81D7-283B04B71C90}
+		{06B46A00-F2B3-458F-832A-9DC926564CEA} = {FDF652C9-5CCB-40EF-81D7-283B04B71C90}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {90379277-71A7-47DA-8ADA-06EE397048AA}

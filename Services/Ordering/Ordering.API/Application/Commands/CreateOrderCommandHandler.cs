@@ -27,7 +27,7 @@ namespace Ordering.API.Application.Commands
             // methods and constructor so validations, invariants and business logic 
             // make sure that consistency is preserved across the whole aggregate
             var address = new Address(message.Street, message.City, message.State, message.Country, message.ZipCode, message.Comments);
-            var order = new Order(message.UserId, address);
+            var order = new Order(message.UserId, message.UserName, address);
 
             foreach (var item in message.OrderItems)
             {

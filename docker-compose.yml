@@ -27,3 +27,17 @@ services:
     depends_on:
     - sql.data
 
+
+  ordering.api:
+    image: ${DOCKER_REGISTRY}orderingapi
+    build:
+      context: .
+      dockerfile: Services/Ordering/Ordering.API/Dockerfile
+
+
+  provider.api:
+    image: ${DOCKER_REGISTRY}providerapi
+    build:
+      context: .
+      dockerfile: Services/Provider/Provider.API/Dockerfile
+
