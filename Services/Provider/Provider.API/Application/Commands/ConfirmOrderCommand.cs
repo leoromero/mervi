@@ -10,14 +10,11 @@ using System.Runtime.Serialization;
 namespace Provider.API.Application.Commands
 {
     [DataContract]
-    public class CreateOrderCommand
+    public class ConfirmOrderCommand
         : IRequest<bool>
     {
         [DataMember]
-        private readonly List<OrderItemDto> _orderItems;
-
-        [DataMember]
-        public string OrderId { get; private set; }
+        public int OrderId { get; private set; }
 
         [DataMember]
         public string Comments { get; private set; }
@@ -27,19 +24,9 @@ namespace Provider.API.Application.Commands
 
         [DataMember]
         public string ProviderId { get; internal set; }
-
-        [DataMember]
-        public IEnumerable<OrderItemDto> OrderItems => _orderItems;
-
-        public CreateOrderCommand()
+        
+        public ConfirmOrderCommand(int orderId, string providerId, DateTime orderDate)
         {
-            _orderItems = new List<OrderItemDto>();
-        }
-
-        public CreateOrderCommand(IList<CustomerOrderItem> customerOrderItems, string userId, string orderId, string userName,
-            string providerId, DateTime orderDate) : this()
-        {
-            _orderItems = customerOrderItems.ToOrderItemsDTO().ToList();           
             OrderId = orderId;
             OrderDate = orderDate;
             ProviderId = providerId;

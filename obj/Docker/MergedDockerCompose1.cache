@@ -3,6 +3,7 @@ services:
     build:
       context: C:\Users\lromero\Source\Repos\Mervi
       dockerfile: Services/Basket/Basket.API/Dockerfile
+      target: base
     depends_on:
     - basket.data
     - rabbitmq

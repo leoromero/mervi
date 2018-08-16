@@ -8,7 +8,7 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
 {
     public class OrderItem : Entity
     {
-        public OrderItemStatus OrderItemStatus { get; private set; }
+        public OrderItemStatus Status { get; private set; }
 
         private string _providerId;
         private string _productName;
@@ -64,6 +64,18 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
             }
 
             this._discount = discount;
+        }
+
+        public void SetSubmittedState()
+        {
+            this._orderItemStatusId = OrderItemStatus.Submitted.Id;
+            this.Status = OrderItemStatus.Submitted;
+        }
+
+        public void SetConfirmedState()
+        {
+            this._orderItemStatusId = OrderItemStatus.StockConfirmed.Id;
+            this.Status = OrderItemStatus.StockConfirmed;
         }
     }
 }

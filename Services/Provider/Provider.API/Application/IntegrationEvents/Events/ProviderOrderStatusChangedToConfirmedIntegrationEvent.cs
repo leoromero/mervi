@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Provider.API.Application.IntegrationEvents.Events
 {
-    public class ProviderOrderStatusChangedToSubmittedIntegrationEvent : IntegrationEvent
+    public class ProviderOrderStatusChangedToConfirmedIntegrationEvent : IntegrationEvent
     {
         public string ProviderId { get; }
         public int OrderId { get; }
@@ -14,7 +14,7 @@ namespace Provider.API.Application.IntegrationEvents.Events
         public IList<OrderItemDto> Items { get; private set; }
         public Guid RequestId { get; private set; }
        
-        public ProviderOrderStatusChangedToSubmittedIntegrationEvent(int customerOrderId, string providerId, string orderStatus, IList<OrderItemDto> items)
+        public ProviderOrderStatusChangedToConfirmedIntegrationEvent(int customerOrderId, string providerId, string orderStatus, IList<OrderItemDto> items)
         {
             ProviderId = providerId;
             OrderId = customerOrderId;

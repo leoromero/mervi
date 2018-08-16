@@ -11,13 +11,13 @@ using System.Threading.Tasks;
 
 namespace Provider.API.Application.DomainEventHandlers.OrderStartedEvent
 {
-    public class OrderStartedEventHandler
-                        : INotificationHandler<OrderStartedDomainEvent>
+    public class OrderConfirmedEventHandler
+                        : INotificationHandler<OrderConfirmedDomainEvent>
     {
         private readonly IMapper<Order, OrderDto> _orderMapper;
         private readonly IProviderIntegrationEventService _orderingIntegrationEventService;
 
-        public OrderStartedEventHandler(
+        public OrderConfirmedEventHandler(
             IProviderIntegrationEventService orderingIntegrationEventService,
             IMapper<Order, OrderDto> orderMapper) 
         {
@@ -25,11 +25,11 @@ namespace Provider.API.Application.DomainEventHandlers.OrderStartedEvent
             _orderMapper = orderMapper ?? throw new ArgumentNullException(nameof(orderMapper));
         }
 
-        public async Task Handle(OrderStartedDomainEvent orderStartedEvent, CancellationToken cancellationToken)
+        public async Task Handle(OrderConfirmedDomainEvent orderConfirmedEvent, CancellationToken cancellationToken)
         {
-            var order = _orderMapper.ToDto(orderStartedEvent.Order);
-            var providerOrderStatusChangedTosubmittedIntegrationEvent = new ProviderOrderStatusChangedToSubmittedIntegrationEvent(order.CustomerOrderId, order.SellerId, order.OrderStatusName, order.OrderItems);
-            await _orderingIntegrationEventService.PublishThroughEventBusAsync(providerOrderStatusChangedTosubmittedIntegrationEvent);
+            var order = _orderMapper.ToDto(orderConfirmedEvent.Order);
+            var providerOrderStatusChangedToConfirmedIntegrationEvent = new ProviderOrderStatusChangedToConfirmedIntegrationEvent(order.CustomerOrderId, order.SellerId, order.OrderStatusName, order.OrderItems);
+            await _orderingIntegrationEventService.PublishThroughEventBusAsync(providerOrderStatusChangedToConfirmedIntegrationEvent);
         }
     }
 }

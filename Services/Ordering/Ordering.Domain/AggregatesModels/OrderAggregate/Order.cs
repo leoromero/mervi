@@ -66,6 +66,16 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
             }
         }
 
+        public void SetItemAsSubmitted(int productId, string providerId)
+        {
+            this._orderItems.FirstOrDefault(x => x.ProductId == productId && x.GetProviderId() == providerId)?.SetSubmittedState();
+        }
+
+        public void SetItemAsConfirmed(int productId, string providerId)
+        {
+            this._orderItems.FirstOrDefault(x => x.ProductId == productId && x.GetProviderId() == providerId)?.SetConfirmedState();
+        }
+
         public void SetBuyerId(int id)
         {
             _buyerId = id;

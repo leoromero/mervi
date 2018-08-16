@@ -15,7 +15,7 @@ namespace Provider.DTOs.OrderAggregateDtos
 
         public int OrderStatusId { get; set; }
         
-        public string CustomerOrderId { get; set; }
+        public int CustomerOrderId { get; set; }
 
         public string SellerId { get; set; }
     }

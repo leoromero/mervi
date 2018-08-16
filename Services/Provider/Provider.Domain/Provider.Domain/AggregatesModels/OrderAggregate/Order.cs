@@ -57,11 +57,26 @@ namespace Provider.Domain.AggregatesModels.OrderAggregate
             }
         }
 
+        public void SetConfirmedStatus()
+        {
+            this._orderStatusId = OrderStatus.StockConfirmed.Id;
+            this.Status = OrderStatus.StockConfirmed;
+
+            AddOrderConfirmedDomainEvent();
+        }
+
         private void AddOrderStartedDomainEvent()
         {
             var orderStartedDomainEvent = new OrderStartedDomainEvent(this);
 
             this.AddDomainEvent(orderStartedDomainEvent);
+        }
+
+        private void AddOrderConfirmedDomainEvent()
+        {
+            var orderConfirmedDomainEvent = new OrderConfirmedDomainEvent(this);
+
+            this.AddDomainEvent(orderConfirmedDomainEvent);
         }
     }
 }
