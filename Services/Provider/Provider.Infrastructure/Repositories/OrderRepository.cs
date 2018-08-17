@@ -2,6 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using Provider.Domain.AggregatesModels.OrderAggregate;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Provider.Infrastructure.Repositories
@@ -41,6 +43,15 @@ namespace Provider.Infrastructure.Repositories
         public void Update(Order order)
         {
             _context.Entry(order).State = EntityState.Modified;
+        }
+
+        public async Task<IList<Order>> GetByProviderAsync(string providerId)
+        {
+            return await _context.Orders
+                .Include(o => o.OrderItems)
+                .Include(o => o.Status)
+                .Where(o => o.GetSellerId() == providerId)
+                .ToListAsync();
         }
     }
 }

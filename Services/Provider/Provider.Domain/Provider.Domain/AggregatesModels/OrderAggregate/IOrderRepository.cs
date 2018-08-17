@@ -14,5 +14,6 @@ namespace Provider.Domain.AggregatesModels.OrderAggregate
         void Update(Order order);
 
         Task<Order> GetAsync(int orderId);
+        Task<IList<Order>> GetByProviderAsync(string providerId);
     }
 }
