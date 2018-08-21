@@ -15,13 +15,14 @@ namespace Ordering.Infrastructure.EntityConfigurations
 
             orderItemConfiguration.Property<int>("ProductId").IsRequired();
 
-            orderItemConfiguration.Property("UnitPrice").IsRequired();
-            orderItemConfiguration.Property("Discunt").IsRequired();
-            orderItemConfiguration.Property("PictureUrl").IsRequired(false);
-            orderItemConfiguration.Property("Units").IsRequired();
-            orderItemConfiguration.Property("ProviderId").IsRequired();
-            orderItemConfiguration.Property("ProductName").IsRequired();
-
+            orderItemConfiguration.Property<decimal>("UnitPrice").IsRequired();
+            orderItemConfiguration.Property<decimal>("Discunt").IsRequired();
+            orderItemConfiguration.Property<string>("PictureUrl").IsRequired(false);
+            orderItemConfiguration.Property<int>("Units").IsRequired();
+            orderItemConfiguration.Property<string>("ProviderId").IsRequired();
+            orderItemConfiguration.Property<string>("ProductName").IsRequired();
+            orderItemConfiguration.Property<int>("OrderId").IsRequired();
+            
             orderItemConfiguration.Ignore(x => x.DomainEvents);
         }
     }

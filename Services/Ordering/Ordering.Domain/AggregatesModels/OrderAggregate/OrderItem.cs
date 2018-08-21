@@ -17,6 +17,7 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
         private string _pictureUrl;
         private int _units;
         private int _orderItemStatusId;
+        private int _orderId;
 
         public int ProductId { get; private set; }
 
@@ -31,6 +32,8 @@ namespace Ordering.Domain.AggregatesModels.OrderAggregate
         public string GetPictureUrl() => _pictureUrl;
 
         public int GetUnits() => _units;
+
+        public int GetOrderId() => _orderId;
 
         protected OrderItem()
         {
