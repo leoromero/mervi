@@ -8,7 +8,6 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-
 namespace Catalog.Infrastructure
 {
     public class CatalogContext : DbContext, IUnitOfWork
