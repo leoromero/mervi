@@ -11795,23 +11795,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lromero\\.nuget\\packages\\": {},
+    "C:\\Users\\romer\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.API\\Provider.API.csproj",
+      "projectUniqueName": "D:\\Repos\\MerviMS\\Services\\Provider\\Provider.API\\Provider.API.csproj",
       "projectName": "Provider.API",
-      "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.API\\Provider.API.csproj",
-      "packagesPath": "C:\\Users\\lromero\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.API\\obj\\",
+      "projectPath": "D:\\Repos\\MerviMS\\Services\\Provider\\Provider.API\\Provider.API.csproj",
+      "packagesPath": "C:\\Users\\romer\\.nuget\\packages\\",
+      "outputPath": "D:\\Repos\\MerviMS\\Services\\Provider\\Provider.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\lromero\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\romer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11824,20 +11824,20 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\EventBus\\EventBus\\EventBus.csproj": {
-              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\EventBus\\EventBus\\EventBus.csproj"
+            "D:\\Repos\\MerviMS\\Common\\EventBus\\EventBus\\EventBus.csproj": {
+              "projectPath": "D:\\Repos\\MerviMS\\Common\\EventBus\\EventBus\\EventBus.csproj"
             },
-            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\Services\\Mervi.Services\\Mervi.Services.csproj": {
-              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\Services\\Mervi.Services\\Mervi.Services.csproj"
+            "D:\\Repos\\MerviMS\\Common\\Services\\Mervi.Services\\Mervi.Services.csproj": {
+              "projectPath": "D:\\Repos\\MerviMS\\Common\\Services\\Mervi.Services\\Mervi.Services.csproj"
             },
-            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.Domain\\Provider.Domain\\Provider.Domain.csproj": {
-              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.Domain\\Provider.Domain\\Provider.Domain.csproj"
+            "D:\\Repos\\MerviMS\\Services\\Provider\\Provider.Domain\\Provider.Domain\\Provider.Domain.csproj": {
+              "projectPath": "D:\\Repos\\MerviMS\\Services\\Provider\\Provider.Domain\\Provider.Domain\\Provider.Domain.csproj"
             },
-            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.DTOs\\Provider.DTOs.csproj": {
-              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.DTOs\\Provider.DTOs.csproj"
+            "D:\\Repos\\MerviMS\\Services\\Provider\\Provider.DTOs\\Provider.DTOs.csproj": {
+              "projectPath": "D:\\Repos\\MerviMS\\Services\\Provider\\Provider.DTOs\\Provider.DTOs.csproj"
             },
-            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.Infrastructure\\Provider.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.Infrastructure\\Provider.Infrastructure.csproj"
+            "D:\\Repos\\MerviMS\\Services\\Provider\\Provider.Infrastructure\\Provider.Infrastructure.csproj": {
+              "projectPath": "D:\\Repos\\MerviMS\\Services\\Provider\\Provider.Infrastructure\\Provider.Infrastructure.csproj"
             }
           }
         }

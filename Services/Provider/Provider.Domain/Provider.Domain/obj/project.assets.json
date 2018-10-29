@@ -721,23 +721,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lromero\\.nuget\\packages\\": {},
+    "C:\\Users\\romer\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.Domain\\Provider.Domain\\Provider.Domain.csproj",
+      "projectUniqueName": "D:\\Repos\\MerviMS\\Services\\Provider\\Provider.Domain\\Provider.Domain\\Provider.Domain.csproj",
       "projectName": "Provider.Domain",
-      "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.Domain\\Provider.Domain\\Provider.Domain.csproj",
-      "packagesPath": "C:\\Users\\lromero\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Services\\Provider\\Provider.Domain\\Provider.Domain\\obj\\",
+      "projectPath": "D:\\Repos\\MerviMS\\Services\\Provider\\Provider.Domain\\Provider.Domain\\Provider.Domain.csproj",
+      "packagesPath": "C:\\Users\\romer\\.nuget\\packages\\",
+      "outputPath": "D:\\Repos\\MerviMS\\Services\\Provider\\Provider.Domain\\Provider.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\lromero\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\romer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -750,8 +750,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\DDD\\Domain\\Mervi.SeedWork\\Mervi.SeedWork.csproj": {
-              "projectPath": "C:\\Users\\lromero\\Source\\Repos\\Mervi\\Common\\DDD\\Domain\\Mervi.SeedWork\\Mervi.SeedWork.csproj"
+            "D:\\Repos\\MerviMS\\Common\\DDD\\Domain\\Mervi.SeedWork\\Mervi.SeedWork.csproj": {
+              "projectPath": "D:\\Repos\\MerviMS\\Common\\DDD\\Domain\\Mervi.SeedWork\\Mervi.SeedWork.csproj"
             }
           }
         }
